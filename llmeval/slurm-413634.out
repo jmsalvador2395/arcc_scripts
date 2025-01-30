@@ -1,0 +1,149 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+[[33mINFO[0m] running infill_solve using meta-llama/Llama-3.3-70B-Instruct
+[[33mINFO[0m] fetching subsample IDs
+counting prompt variations
+[[33mINFO[0m] unique template_name query took 2001.68 seconds
+[[33mINFO[0m] unique template_id query took 42.44 seconds
+[[33mINFO[0m] unique sys_id query took 41.23 seconds
+fitb_l0, tids: 1, sids: 6
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.16 seconds
+[[33mINFO[0m] unique template_id query took 42.90 seconds
+[[33mINFO[0m] unique sys_id query took 41.42 seconds
+fitb_l1, tids: 4, sids: 6
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.08 seconds
+[[33mINFO[0m] unique template_id query took 42.26 seconds
+[[33mINFO[0m] unique sys_id query took 41.36 seconds
+fitb_l2, tids: 5, sids: 6
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.09 seconds
+[[33mINFO[0m] unique template_id query took 41.40 seconds
+[[33mINFO[0m] unique sys_id query took 41.54 seconds
+fitb_l3, tids: 5, sids: 6
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.10 seconds
+[[33mINFO[0m] unique template_id query took 42.76 seconds
+[[33mINFO[0m] unique sys_id query took 41.53 seconds
+fitb_l4, tids: 6, sids: 6
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.12 seconds
+[[33mINFO[0m] batch_size: 1000, limit: 1000, N: 126000, N_batch: 126
+creating generator function
+[[33mINFO[0m] loading model: meta-llama/Llama-3.3-70B-Instruct
+WARNING 01-24 19:21:26 config.py:319] bitsandbytes quantization is not fully optimized yet. The speed can be slower than non-quantized models.
+WARNING 01-24 19:21:26 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-24 19:21:26 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-24 19:21:26 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-24 19:21:43,114	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-24 19:22:03 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='meta-llama/Llama-3.3-70B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.3-70B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/lustre/fs1/home/jsalvador/projects/llmeval/data/llm_cache', load_format=LoadFormat.BITSANDBYTES, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=bitsandbytes, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=1737764485, served_model_name=meta-llama/Llama-3.3-70B-Instruct, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 01-24 19:22:04 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-24 19:22:51 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-24 19:22:51 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1882545)[0m INFO 01-24 19:22:51 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1882545)[0m INFO 01-24 19:22:51 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-24 19:22:55 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1882545)[0m INFO 01-24 19:22:55 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-24 19:22:55 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14cb769a5f90>, local_subscribe_port=51369, remote_subscribe_port=None)
+INFO 01-24 19:22:56 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+[36m(RayWorkerWrapper pid=1882545)[0m INFO 01-24 19:22:56 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+INFO 01-24 19:22:59 loader.py:1014] Loading weights with BitsAndBytes quantization.  May take a while ...
+[36m(RayWorkerWrapper pid=1882545)[0m INFO 01-24 19:22:59 loader.py:1014] Loading weights with BitsAndBytes quantization.  May take a while ...
+INFO 01-24 19:23:00 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=1882545)[0m INFO 01-24 19:23:00 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/30 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   3% Completed | 1/30 [00:08<03:57,  8.19s/it]
+Loading safetensors checkpoint shards:   7% Completed | 2/30 [00:15<03:38,  7.79s/it]
+Loading safetensors checkpoint shards:  10% Completed | 3/30 [00:22<03:19,  7.40s/it]
+Loading safetensors checkpoint shards:  13% Completed | 4/30 [00:28<02:57,  6.82s/it]
+Loading safetensors checkpoint shards:  17% Completed | 5/30 [00:34<02:38,  6.34s/it]
+Loading safetensors checkpoint shards:  20% Completed | 6/30 [00:40<02:32,  6.34s/it]
+Loading safetensors checkpoint shards:  23% Completed | 7/30 [00:47<02:27,  6.43s/it]
+Loading safetensors checkpoint shards:  27% Completed | 8/30 [00:53<02:24,  6.58s/it]
+Loading safetensors checkpoint shards:  30% Completed | 9/30 [01:00<02:16,  6.52s/it]
+Loading safetensors checkpoint shards:  33% Completed | 10/30 [01:06<02:09,  6.46s/it]
+Loading safetensors checkpoint shards:  37% Completed | 11/30 [01:09<01:42,  5.39s/it]
+Loading safetensors checkpoint shards:  40% Completed | 12/30 [01:17<01:48,  6.04s/it]
+Loading safetensors checkpoint shards:  43% Completed | 13/30 [01:22<01:41,  5.97s/it]
+Loading safetensors checkpoint shards:  47% Completed | 14/30 [01:30<01:45,  6.60s/it]
+Loading safetensors checkpoint shards:  50% Completed | 15/30 [01:37<01:37,  6.50s/it]
+Loading safetensors checkpoint shards:  53% Completed | 16/30 [01:45<01:38,  7.04s/it]
+Loading safetensors checkpoint shards:  57% Completed | 17/30 [01:52<01:31,  7.01s/it]
+Loading safetensors checkpoint shards:  60% Completed | 18/30 [02:00<01:27,  7.30s/it]
+Loading safetensors checkpoint shards:  63% Completed | 19/30 [02:09<01:26,  7.83s/it]
+Loading safetensors checkpoint shards:  67% Completed | 20/30 [02:16<01:15,  7.54s/it]
+Loading safetensors checkpoint shards:  70% Completed | 21/30 [02:23<01:07,  7.50s/it]
+Loading safetensors checkpoint shards:  73% Completed | 22/30 [02:29<00:56,  7.05s/it]
+Loading safetensors checkpoint shards:  77% Completed | 23/30 [02:34<00:45,  6.49s/it]
+Loading safetensors checkpoint shards:  80% Completed | 24/30 [02:42<00:40,  6.79s/it]
+Loading safetensors checkpoint shards:  83% Completed | 25/30 [02:51<00:36,  7.33s/it]
+Loading safetensors checkpoint shards:  87% Completed | 26/30 [02:58<00:29,  7.48s/it]
+Loading safetensors checkpoint shards:  90% Completed | 27/30 [03:04<00:20,  6.95s/it]
+Loading safetensors checkpoint shards:  93% Completed | 28/30 [03:11<00:13,  6.93s/it]
+Loading safetensors checkpoint shards:  97% Completed | 29/30 [03:17<00:06,  6.69s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [03:24<00:00,  6.83s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [03:24<00:00,  6.82s/it]
+
+INFO 01-24 19:26:25 model_runner.py:1025] Loading model weights took 18.4395 GB
+[36m(RayWorkerWrapper pid=1882545)[0m INFO 01-24 19:26:25 model_runner.py:1025] Loading model weights took 18.4395 GB
+INFO 01-24 19:26:33 distributed_gpu_executor.py:57] # GPU blocks: 20819, # CPU blocks: 1638
+[[33mINFO[0m] begin collecting responses
+generating responses:   0%|          | 0/378 [00:00<?, ?it/s]generating responses:  96%|█████████▋| 364/378 [23:12<00:53,  3.82s/it]generating responses:  97%|█████████▋| 365/378 [55:41<02:28, 11.43s/it]generating responses:  97%|█████████▋| 366/378 [1:21:03<03:57, 19.82s/it]generating responses:  97%|█████████▋| 367/378 [1:46:03<05:46, 31.47s/it]generating responses:  97%|█████████▋| 368/378 [2:08:58<07:44, 46.42s/it][rank0]:[E124 22:32:25.156829830 ProcessGroupNCCL.cpp:607] [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=1929382, OpType=BROADCAST, NumelIn=49, NumelOut=49, Timeout(ms)=600000) ran for 600224 milliseconds before timing out.
+[rank0]:[E124 22:32:25.734130599 ProcessGroupNCCL.cpp:1664] [PG 3 Rank 0] Exception (either an error or timeout) detected by watchdog at work: 1929382, last enqueued NCCL work: 1929428, last completed NCCL work: 1929381.
+[rank0]:[E124 22:32:25.734891397 ProcessGroupNCCL.cpp:1709] [PG 3 Rank 0] Timeout at NCCL work: 1929382, last enqueued NCCL work: 1929428, last completed NCCL work: 1929381.
+[rank0]:[E124 22:32:25.735013122 ProcessGroupNCCL.cpp:621] [Rank 0] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank0]:[E124 22:32:25.735168215 ProcessGroupNCCL.cpp:627] [Rank 0] To avoid data inconsistency, we are taking the entire process down.
+[rank0]:[E124 22:32:27.793740210 ProcessGroupNCCL.cpp:1515] [PG 3 Rank 0] Process group watchdog thread terminated with exception: [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=1929382, OpType=BROADCAST, NumelIn=49, NumelOut=49, Timeout(ms)=600000) ran for 600224 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:609 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x14cc9d723f86 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x14cc9ea208d2 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x14cc9ea27313 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x14cc9ea296fc in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x14ccee10abf4 in /lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6)
+frame #5: <unknown function> + 0x81cf (0x14ccfe15e1cf in /lib64/libpthread.so.0)
+frame #6: clone + 0x43 (0x14ccfd63fe73 in /lib64/libc.so.6)
+
+[2025-01-24 22:32:27,707 E 1881618 1886495] logging.cc:111: Unhandled exception: N3c1016DistBackendErrorE. what(): [PG 3 Rank 0] Process group watchdog thread terminated with exception: [Rank 0] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=1929382, OpType=BROADCAST, NumelIn=49, NumelOut=49, Timeout(ms)=600000) ran for 600224 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:609 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x14cc9d723f86 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x1d2 (0x14cc9ea208d2 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x14cc9ea27313 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x14cc9ea296fc in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0xdbbf4 (0x14ccee10abf4 in /lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6)
+frame #5: <unknown function> + 0x81cf (0x14ccfe15e1cf in /lib64/libpthread.so.0)
+frame #6: clone + 0x43 (0x14ccfd63fe73 in /lib64/libc.so.6)
+
+Exception raised from ncclCommWatchdog at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1521 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x14cc9d723f86 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe5aa84 (0x14cc9e6b2a84 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0xdbbf4 (0x14ccee10abf4 in /lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6)
+frame #3: <unknown function> + 0x81cf (0x14ccfe15e1cf in /lib64/libpthread.so.0)
+frame #4: clone + 0x43 (0x14ccfd63fe73 in /lib64/libc.so.6)
+
+[2025-01-24 22:33:13,187 E 1881618 1886495] logging.cc:118: Stack trace: 
+ /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/_raylet.so(+0x115a17a) [0x14ccef5b717a] ray::operator<<()
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/_raylet.so(+0x115d152) [0x14ccef5ba152] ray::TerminateHandler()
+/lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6(+0xb135a) [0x14ccee0e035a] __cxxabiv1::__terminate()
+/lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6(+0xb13c5) [0x14ccee0e03c5]
+/lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6(+0xb134f) [0x14ccee0e034f]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so(+0xe5ab35) [0x14cc9e6b2b35] c10d::ProcessGroupNCCL::ncclCommWatchdog()
+/lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6(+0xdbbf4) [0x14ccee10abf4] execute_native_thread_routine
+/lib64/libpthread.so.0(+0x81cf) [0x14ccfe15e1cf] start_thread
+/lib64/libc.so.6(clone+0x43) [0x14ccfd63fe73] clone
+
+*** SIGABRT received at time=1737775993 on cpu 32 ***
+PC: @     0x14ccfd654aff  (unknown)  raise
+    @     0x14ccfe168cf0       5072  (unknown)
+    @     0x14ccee0e035a  (unknown)  __cxxabiv1::__terminate()
+    @     0x14ccee0e0070  (unknown)  (unknown)
+[2025-01-24 22:33:13,189 E 1881618 1886495] logging.cc:447: *** SIGABRT received at time=1737775993 on cpu 32 ***
+[2025-01-24 22:33:13,189 E 1881618 1886495] logging.cc:447: PC: @     0x14ccfd654aff  (unknown)  raise
+[2025-01-24 22:33:13,189 E 1881618 1886495] logging.cc:447:     @     0x14ccfe168cf0       5072  (unknown)
+[2025-01-24 22:33:13,189 E 1881618 1886495] logging.cc:447:     @     0x14ccee0e035a  (unknown)  __cxxabiv1::__terminate()
+[2025-01-24 22:33:13,190 E 1881618 1886495] logging.cc:447:     @     0x14ccee0e0070  (unknown)  (unknown)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/var/spool/slurmd/job413634/slurm_script: line 9: 1881618 Aborted                 (core dumped) llm_eval infill_solve -m meta-llama/Llama-3.3-70B-Instruct -p data/results/infill/20250108-222137/data.db -l 1000

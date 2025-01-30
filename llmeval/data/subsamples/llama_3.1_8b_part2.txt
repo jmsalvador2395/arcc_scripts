@@ -1,0 +1,44 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+[[33mINFO[0m] running infill_solve using meta-llama/Llama-3.1-8B-Instruct
+[[33mINFO[0m] fetching subsample IDs
+counting prompt variations
+[[33mINFO[0m] unique template_name query took 2135.11 seconds
+[[33mINFO[0m] unique template_id query took 27.96 seconds
+[[33mINFO[0m] unique sys_id query took 27.19 seconds
+fitb_l0, tids: 1, sids: 6
+[[33mINFO[0m] unique template_id query took 27.64 seconds
+[[33mINFO[0m] unique sys_id query took 27.91 seconds
+fitb_l1, tids: 4, sids: 6
+[[33mINFO[0m] unique template_id query took 27.82 seconds
+[[33mINFO[0m] unique sys_id query took 28.00 seconds
+fitb_l2, tids: 5, sids: 6
+[[33mINFO[0m] unique template_id query took 27.69 seconds
+[[33mINFO[0m] unique sys_id query took 27.64 seconds
+fitb_l3, tids: 5, sids: 6
+[[33mINFO[0m] unique template_id query took 28.33 seconds
+[[33mINFO[0m] unique sys_id query took 27.60 seconds
+fitb_l4, tids: 6, sids: 6
+creating generator function
+[[33mINFO[0m] loading model: meta-llama/Llama-3.1-8B-Instruct
+WARNING 01-14 20:08:46 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-14 20:08:46 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-14 20:08:46 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-14 20:09:01,728	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-14 20:09:04 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='meta-llama/Llama-3.1-8B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.1-8B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=48000, download_dir='/lustre/fs1/home/jsalvador/projects/llmeval/data/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=1736903326, served_model_name=meta-llama/Llama-3.1-8B-Instruct, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 01-14 20:09:05 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-14 20:09:27 model_runner.py:1014] Starting to load model meta-llama/Llama-3.1-8B-Instruct...
+INFO 01-14 20:09:32 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:08<00:25,  8.66s/it]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:15<00:14,  7.42s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:16<00:04,  4.77s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:25<00:00,  6.43s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:25<00:00,  6.45s/it]
+
+INFO 01-14 20:09:58 model_runner.py:1025] Loading model weights took 14.9888 GB
+INFO 01-14 20:10:04 distributed_gpu_executor.py:57] # GPU blocks: 28047, # CPU blocks: 2048
+[[33mINFO[0m] begin collecting responses
+generating responses:   0%|          | 0/378 [00:00<?, ?it/s]generating responses:  98%|█████████▊| 369/378 [15:30<00:22,  2.52s/it]generating responses:  98%|█████████▊| 370/378 [17:29<00:23,  2.97s/it]generating responses:  98%|█████████▊| 371/378 [21:42<00:30,  4.34s/it]generating responses:  98%|█████████▊| 372/378 [35:00<01:03, 10.50s/it]generating responses:  99%|█████████▊| 373/378 [37:58<01:01, 12.34s/it]generating responses:  99%|█████████▉| 374/378 [50:45<01:35, 23.99s/it]generating responses:  99%|█████████▉| 375/378 [1:03:11<01:58, 39.57s/it]generating responses:  99%|█████████▉| 376/378 [1:06:08<01:27, 43.67s/it]generating responses: 100%|█████████▉| 377/378 [1:18:37<01:12, 72.56s/it]generating responses: 100%|██████████| 378/378 [1:34:05<00:00, 119.88s/it]generating responses: 100%|██████████| 378/378 [1:34:05<00:00, 14.94s/it] 

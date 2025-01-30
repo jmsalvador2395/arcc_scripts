@@ -1,0 +1,79 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+[[33mINFO[0m] running infill_solve using meta-llama/Llama-3.3-70B-Instruct
+[[33mINFO[0m] fetching subsample IDs
+counting prompt variations
+[[33mINFO[0m] unique template_name query took 19.23 seconds
+[[33mINFO[0m] unique template_id query took 0.01 seconds
+[[33mINFO[0m] unique sys_id query took 0.01 seconds
+fitb_l1, tids: 4, sids: 1
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.01 seconds
+[[33mINFO[0m] unique template_id query took 0.01 seconds
+[[33mINFO[0m] unique sys_id query took 0.01 seconds
+fitb_l2, tids: 4, sids: 1
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.01 seconds
+[[33mINFO[0m] unique template_id query took 0.01 seconds
+[[33mINFO[0m] unique sys_id query took 0.01 seconds
+fitb_l3, tids: 4, sids: 1
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.01 seconds
+[[33mINFO[0m] unique template_id query took 0.01 seconds
+[[33mINFO[0m] unique sys_id query took 0.01 seconds
+fitb_l4, tids: 4, sids: 1
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.01 seconds
+[[33mINFO[0m] batch_size: 1000, limit: 1000, N: 16000, N_batch: 16
+creating generator function
+[[33mINFO[0m] loading model: meta-llama/Llama-3.3-70B-Instruct
+WARNING 01-28 00:46:20 config.py:319] bitsandbytes quantization is not fully optimized yet. The speed can be slower than non-quantized models.
+WARNING 01-28 00:46:20 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-28 00:46:20 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+INFO 01-28 00:46:20 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='meta-llama/Llama-3.3-70B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.3-70B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/lustre/fs1/home/jsalvador/projects/llmeval/data/llm_cache', load_format=LoadFormat.BITSANDBYTES, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=bitsandbytes, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=1738043177, served_model_name=meta-llama/Llama-3.3-70B-Instruct, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=True, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 01-28 00:46:33 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+INFO 01-28 00:46:39 loader.py:1014] Loading weights with BitsAndBytes quantization.  May take a while ...
+INFO 01-28 00:46:40 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/30 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   3% Completed | 1/30 [00:06<02:56,  6.10s/it]
+Loading safetensors checkpoint shards:   7% Completed | 2/30 [00:11<02:38,  5.64s/it]
+Loading safetensors checkpoint shards:  10% Completed | 3/30 [00:15<02:19,  5.15s/it]
+Loading safetensors checkpoint shards:  13% Completed | 4/30 [00:20<02:05,  4.81s/it]
+Loading safetensors checkpoint shards:  17% Completed | 5/30 [00:24<01:57,  4.70s/it]
+Loading safetensors checkpoint shards:  20% Completed | 6/30 [00:29<01:53,  4.75s/it]
+Loading safetensors checkpoint shards:  23% Completed | 7/30 [00:35<01:55,  5.02s/it]
+Loading safetensors checkpoint shards:  27% Completed | 8/30 [00:40<01:53,  5.17s/it]
+Loading safetensors checkpoint shards:  30% Completed | 9/30 [00:46<01:50,  5.24s/it]
+Loading safetensors checkpoint shards:  33% Completed | 10/30 [00:50<01:39,  4.99s/it]
+Loading safetensors checkpoint shards:  37% Completed | 11/30 [00:53<01:20,  4.25s/it]
+Loading safetensors checkpoint shards:  40% Completed | 12/30 [00:59<01:26,  4.82s/it]
+Loading safetensors checkpoint shards:  43% Completed | 13/30 [01:04<01:22,  4.87s/it]
+Loading safetensors checkpoint shards:  47% Completed | 14/30 [01:08<01:17,  4.82s/it]
+Loading safetensors checkpoint shards:  50% Completed | 15/30 [01:14<01:16,  5.07s/it]
+Loading safetensors checkpoint shards:  53% Completed | 16/30 [01:19<01:11,  5.11s/it]
+Loading safetensors checkpoint shards:  57% Completed | 17/30 [01:24<01:06,  5.13s/it]
+Loading safetensors checkpoint shards:  60% Completed | 18/30 [01:29<00:59,  4.92s/it]
+Loading safetensors checkpoint shards:  63% Completed | 19/30 [01:35<00:57,  5.22s/it]
+Loading safetensors checkpoint shards:  67% Completed | 20/30 [01:39<00:49,  4.97s/it]
+Loading safetensors checkpoint shards:  70% Completed | 21/30 [01:45<00:46,  5.18s/it]
+Loading safetensors checkpoint shards:  73% Completed | 22/30 [01:49<00:39,  4.95s/it]
+Loading safetensors checkpoint shards:  77% Completed | 23/30 [01:53<00:32,  4.67s/it]
+Loading safetensors checkpoint shards:  80% Completed | 24/30 [01:58<00:27,  4.65s/it]
+Loading safetensors checkpoint shards:  83% Completed | 25/30 [02:03<00:24,  4.91s/it]
+Loading safetensors checkpoint shards:  87% Completed | 26/30 [02:09<00:20,  5.15s/it]
+Loading safetensors checkpoint shards:  90% Completed | 27/30 [02:13<00:14,  4.92s/it]
+Loading safetensors checkpoint shards:  93% Completed | 28/30 [02:18<00:09,  4.84s/it]
+Loading safetensors checkpoint shards:  97% Completed | 29/30 [02:23<00:04,  4.89s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [02:28<00:00,  4.96s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [02:28<00:00,  4.96s/it]
+
+INFO 01-28 00:49:10 model_runner.py:1025] Loading model weights took 36.8384 GB
+INFO 01-28 00:49:16 gpu_executor.py:122] # GPU blocks: 6726, # CPU blocks: 819
+INFO 01-28 00:49:19 model_runner.py:1329] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 01-28 00:49:19 model_runner.py:1333] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 01-28 00:49:59 model_runner.py:1456] Graph capturing finished in 40 secs.
+[[33mINFO[0m] begin collecting responses
+generating responses:   0%|          | 0/48 [00:00<?, ?it/s]generating responses:   2%|▏         | 1/48 [13:08<10:17:39, 788.51s/it]generating responses:   4%|▍         | 2/48 [26:29<10:10:08, 795.84s/it]generating responses:   6%|▋         | 3/48 [39:35<9:53:39, 791.53s/it] generating responses:   8%|▊         | 4/48 [1:00:10<11:48:41, 966.40s/it]generating responses:  10%|█         | 5/48 [1:19:37<12:24:23, 1038.69s/it]generating responses:  12%|█▎        | 6/48 [1:47:42<14:40:56, 1258.50s/it]generating responses:  15%|█▍        | 7/48 [1:58:01<11:57:09, 1049.51s/it]generating responses:  17%|█▋        | 8/48 [2:08:18<10:07:47, 911.69s/it] generating responses:  19%|█▉        | 9/48 [2:18:35<8:52:47, 819.69s/it] generating responses:  21%|██        | 10/48 [2:32:12<8:38:32, 818.75s/it]generating responses:  23%|██▎       | 11/48 [2:42:52<7:51:10, 764.07s/it]generating responses:  25%|██▌       | 12/48 [2:58:04<8:05:23, 808.99s/it]generating responses:  27%|██▋       | 13/48 [3:13:07<8:08:30, 837.43s/it]generating responses:  29%|██▉       | 14/48 [3:28:12<8:06:09, 857.92s/it]generating responses:  31%|███▏      | 15/48 [3:41:03<7:37:30, 831.84s/it]WARNING 01-28 04:38:41 scheduler.py:1439] Sequence group 15740 is preempted by PreemptionMode.RECOMPUTE mode because there is not enough KV cache space. This can affect the end-to-end performance. Increase gpu_memory_utilization or tensor_parallel_size to provide more KV cache memory. total_num_cumulative_preemption=1
+generating responses:  33%|███▎      | 16/48 [4:07:57<9:29:06, 1067.07s/it]generating responses:  35%|███▌      | 17/48 [4:33:18<10:21:50, 1203.57s/it]generating responses:  38%|███▊      | 18/48 [4:59:23<10:56:06, 1312.21s/it]generating responses:  40%|███▉      | 19/48 [5:09:53<8:55:16, 1107.45s/it] generating responses:  42%|████▏     | 20/48 [5:20:23<7:29:50, 963.96s/it] generating responses:  44%|████▍     | 21/48 [5:30:51<6:28:27, 863.26s/it]generating responses:  46%|████▌     | 22/48 [5:42:39<5:53:50, 816.55s/it]generating responses:  48%|████▊     | 23/48 [5:54:26<5:26:30, 783.64s/it]generating responses:  50%|█████     | 24/48 [6:05:18<4:57:45, 744.39s/it]generating responses:  52%|█████▏    | 25/48 [6:19:42<4:59:05, 780.25s/it]generating responses:  54%|█████▍    | 26/48 [6:33:38<4:52:09, 796.79s/it]generating responses:  56%|█████▋    | 27/48 [6:47:37<4:43:21, 809.58s/it]generating responses:  58%|█████▊    | 28/48 [7:13:01<5:41:16, 1023.81s/it]generating responses:  60%|██████    | 29/48 [7:38:49<6:14:01, 1181.12s/it]generating responses:  62%|██████▎   | 30/48 [8:04:06<6:24:35, 1281.98s/it]generating responses:  65%|██████▍   | 31/48 [8:14:41<5:08:11, 1087.76s/it]generating responses:  67%|██████▋   | 32/48 [8:25:12<4:13:33, 950.85s/it] generating responses:  69%|██████▉   | 33/48 [8:35:41<3:33:31, 854.12s/it]generating responses:  71%|███████   | 34/48 [8:47:09<3:07:40, 804.32s/it]generating responses:  73%|███████▎  | 35/48 [8:58:08<2:44:51, 760.85s/it]generating responses:  75%|███████▌  | 36/48 [9:09:54<2:28:51, 744.31s/it]generating responses:  77%|███████▋  | 37/48 [9:25:22<2:26:33, 799.41s/it]generating responses:  79%|███████▉  | 38/48 [9:41:04<2:20:23, 842.32s/it]generating responses:  81%|████████▏ | 39/48 [9:54:50<2:05:34, 837.18s/it]generating responses:  83%|████████▎ | 40/48 [10:24:28<2:29:17, 1119.67s/it]generating responses:  85%|████████▌ | 41/48 [10:55:27<2:36:29, 1341.35s/it]generating responses:  88%|████████▊ | 42/48 [11:27:36<2:31:46, 1517.67s/it]generating responses:  90%|████████▉ | 43/48 [11:38:58<1:45:34, 1266.91s/it]generating responses:  92%|█████████▏| 44/48 [12:05:58<1:31:31, 1372.96s/it]generating responses:  94%|█████████▍| 45/48 [12:20:16<1:00:55, 1218.40s/it]generating responses:  96%|█████████▌| 46/48 [12:34:39<37:03, 1111.70s/it]  generating responses:  98%|█████████▊| 47/48 [12:50:04<17:35, 1055.62s/it]generating responses: 100%|██████████| 48/48 [13:07:46<00:00, 1057.72s/it]generating responses: 100%|██████████| 48/48 [13:07:46<00:00, 984.72s/it] 

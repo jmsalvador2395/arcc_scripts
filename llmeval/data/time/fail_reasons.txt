@@ -1,0 +1,166 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+------------------
+*** EVALUATING allenai/OLMo-2-1124-7B-Instruct ***
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-7B-Instruct
+User-specified max_model_len (8000) is greater than the derived max_model_len (max_position_embeddings=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-7B-Instruct
+User-specified max_model_len (8000) is greater than the derived max_model_len (max_position_embeddings=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-7B-Instruct
+User-specified max_model_len (8000) is greater than the derived max_model_len (max_position_embeddings=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-7B-Instruct
+User-specified max_model_len (8000) is greater than the derived max_model_len (max_position_embeddings=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+*** EVALUATING allenai/OLMo-2-1124-13B-Instruct ***
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-13B-Instruct
+User-specified max_model_len (8000) is greater than the derived max_model_len (max_position_embeddings=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-13B-Instruct
+User-specified max_model_len (8000) is greater than the derived max_model_len (max_position_embeddings=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-13B-Instruct
+User-specified max_model_len (8000) is greater than the derived max_model_len (max_position_embeddings=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-13B-Instruct
+User-specified max_model_len (8000) is greater than the derived max_model_len (max_position_embeddings=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+*** EVALUATING google/gemma-2-2b-it ***
+WARNING 01-23 03:57:50 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-2b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+WARNING 01-23 03:58:03 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-2b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+WARNING 01-23 03:58:15 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-2b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+WARNING 01-23 03:58:28 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-2b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+*** EVALUATING google/gemma-2-9b-it ***
+WARNING 01-23 03:58:41 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-9b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+WARNING 01-23 03:58:54 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-9b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+WARNING 01-23 03:59:07 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-9b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+WARNING 01-23 03:59:20 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-9b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+*** EVALUATING google/gemma-2-27b-it ***
+WARNING 01-23 03:59:33 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-27b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+WARNING 01-23 03:59:45 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-27b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+WARNING 01-23 03:59:58 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-27b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+WARNING 01-23 04:00:11 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-27b-it
+User-specified max_model_len (8000) is greater than the derived max_model_len (sliding_window=4096 or model_max_length=None in model's config.json). This may lead to incorrect model outputs or CUDA errors. To allow overriding this maximum, set the env var VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
+*** EVALUATING mistralai/Mistral-Nemo-Instruct-2407 ***
+WARNING 01-23 04:00:24 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-23 04:00:24 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-23 04:00:24 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-23 04:00:34,286	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-23 04:00:52 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Nemo-Instruct-2407', speculative_config=None, tokenizer='mistralai/Mistral-Nemo-Instruct-2407', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Nemo-Instruct-2407, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-23 04:00:53 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-23 04:01:31 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-23 04:01:31 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=2279556)[0m INFO 01-23 04:01:31 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=2279556)[0m INFO 01-23 04:01:31 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-23 04:01:32 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=2279556)[0m INFO 01-23 04:01:32 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-23 04:01:32 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x1539a459fe50>, local_subscribe_port=34287, remote_subscribe_port=None)
+INFO 01-23 04:01:32 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+[36m(RayWorkerWrapper pid=2279556)[0m INFO 01-23 04:01:32 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+INFO 01-23 04:01:32 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=2279556)[0m INFO 01-23 04:01:32 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:04<00:19,  4.82s/it]
+Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:09<00:14,  4.83s/it]
+Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:14<00:09,  4.99s/it]
+Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:21<00:05,  5.53s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:26<00:00,  5.33s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:26<00:00,  5.23s/it]
+
+INFO 01-23 04:13:57 model_runner.py:1025] Loading model weights took 11.4383 GB
+[36m(RayWorkerWrapper pid=2279556)[0m INFO 01-23 04:13:57 model_runner.py:1025] Loading model weights took 11.4383 GB
+INFO 01-23 04:14:00 distributed_gpu_executor.py:57] # GPU blocks: 47457, # CPU blocks: 3276
+0it [00:00, ?it/s]1it [00:23, 23.21s/it]slurmstepd: error: *** JOB 413180 STEPD TERMINATED ON evc38 AT 2025-01-23T04:23:00 DUE TO JOB NOT ENDING WITH SIGNALS ***
+[2025-01-23 04:23:59,329 E 2279153 2283232] gcs_rpc_client.h:664: Failed to connect to GCS within 60 seconds. GCS may have been killed. It's either GCS is terminated by `ray stop` or is killed unexpectedly. If it is killed unexpectedly, see the log file gcs_server.out. https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure. The program will terminate.
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+WARNING 01-23 04:25:35 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-23 04:25:35 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-23 04:25:35 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-23 04:25:46,208	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-23 04:26:04 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Nemo-Instruct-2407', speculative_config=None, tokenizer='mistralai/Mistral-Nemo-Instruct-2407', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Nemo-Instruct-2407, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-23 04:26:04 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-23 04:26:41 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-23 04:26:41 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=2284245)[0m INFO 01-23 04:26:41 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=2284245)[0m INFO 01-23 04:26:41 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-23 04:26:42 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-23 04:26:42 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x1508d45853d0>, local_subscribe_port=40149, remote_subscribe_port=None)
+INFO 01-23 04:26:42 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+[36m(RayWorkerWrapper pid=2284245)[0m INFO 01-23 04:26:42 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=2284245)[0m INFO 01-23 04:26:42 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+INFO 01-23 04:26:43 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=2284245)[0m INFO 01-23 04:26:43 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:04<00:16,  4.18s/it]
+Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:07<00:11,  3.93s/it]
+Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:12<00:08,  4.14s/it]
+Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:18<00:04,  4.81s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:23<00:00,  5.03s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:23<00:00,  4.71s/it]
+
+INFO 01-23 04:27:07 model_runner.py:1025] Loading model weights took 11.4383 GB
+[36m(RayWorkerWrapper pid=2284245)[0m INFO 01-23 04:27:07 model_runner.py:1025] Loading model weights took 11.4383 GB
+INFO 01-23 04:27:09 distributed_gpu_executor.py:57] # GPU blocks: 47457, # CPU blocks: 3276
+0it [00:00, ?it/s]1it [01:34, 94.02s/it]2it [02:26, 69.69s/it]3it [03:15, 60.21s/it]4it [04:06, 56.45s/it]4it [04:06, 61.58s/it]
+*********************************************
+model: mistralai/Mistral-Nemo-Instruct-2407, limit: 10,000, batch size: 2500 num_devices: 2, time: 246.41
+*********************************************
+[rank0]:[W123 04:31:42.774036314 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+WARNING 01-23 04:32:04 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-23 04:32:04 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-23 04:32:04 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-23 04:32:14,685	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-23 04:32:32 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Nemo-Instruct-2407', speculative_config=None, tokenizer='mistralai/Mistral-Nemo-Instruct-2407', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Nemo-Instruct-2407, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-23 04:32:33 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-23 04:33:10 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-23 04:33:10 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=2288788)[0m INFO 01-23 04:33:10 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=2288788)[0m INFO 01-23 04:33:10 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-23 04:33:10 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-23 04:33:10 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14613df274d0>, local_subscribe_port=40135, remote_subscribe_port=None)
+INFO 01-23 04:33:10 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+[36m(RayWorkerWrapper pid=2288788)[0m INFO 01-23 04:33:10 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=2288788)[0m INFO 01-23 04:33:10 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+INFO 01-23 04:33:11 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:04<00:18,  4.63s/it]
+Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:08<00:12,  4.32s/it]
+Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:13<00:08,  4.40s/it]
+Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:19<00:04,  4.94s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:24<00:00,  5.03s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:24<00:00,  4.84s/it]
+
+[36m(RayWorkerWrapper pid=2288788)[0m INFO 01-23 04:33:11 weight_utils.py:242] Using model weights format ['*.safetensors']
+INFO 01-23 04:33:35 model_runner.py:1025] Loading model weights took 11.4383 GB
+[36m(RayWorkerWrapper pid=2288788)[0m INFO 01-23 04:33:35 model_runner.py:1025] Loading model weights took 11.4383 GB
+INFO 01-23 04:33:37 distributed_gpu_executor.py:57] # GPU blocks: 47457, # CPU blocks: 3276
+0it [00:00, ?it/s]slurmstepd: error: *** JOB 413180 ON evc41 CANCELLED AT 2025-01-23T09:30:57 ***
+slurmstepd: error: *** JOB 413180 STEPD TERMINATED ON evc41 AT 2025-01-23T09:33:31 DUE TO JOB NOT ENDING WITH SIGNALS ***

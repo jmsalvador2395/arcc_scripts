@@ -1,0 +1,180 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+[[33mINFO[0m] running infill_solve using meta-llama/Llama-3.3-70B-Instruct
+[[33mINFO[0m] fetching subsample IDs
+counting prompt variations
+[[33mINFO[0m] unique template_name query took 2172.46 seconds
+[[33mINFO[0m] unique template_id query took 2243.95 seconds
+[[33mINFO[0m] unique sys_id query took 2122.62 seconds
+fitb_l0, tids: 1, sids: 6
+[[33mINFO[0m] unique template_id query took 2105.16 seconds
+[[33mINFO[0m] unique sys_id query took 2105.61 seconds
+fitb_l1, tids: 4, sids: 6
+[[33mINFO[0m] unique template_id query took 2086.51 seconds
+[[33mINFO[0m] unique sys_id query took 1657.54 seconds
+fitb_l2, tids: 5, sids: 6
+[[33mINFO[0m] unique template_id query took 69.00 seconds
+[[33mINFO[0m] unique sys_id query took 27.07 seconds
+fitb_l3, tids: 5, sids: 6
+[[33mINFO[0m] unique template_id query took 26.87 seconds
+[[33mINFO[0m] unique sys_id query took 27.37 seconds
+fitb_l4, tids: 6, sids: 6
+[[33mINFO[0m] prompts to process: 126000
+creating generator function
+[[33mINFO[0m] loading model: meta-llama/Llama-3.3-70B-Instruct
+WARNING 01-20 17:36:19 config.py:319] bitsandbytes quantization is not fully optimized yet. The speed can be slower than non-quantized models.
+WARNING 01-20 17:36:19 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-20 17:36:19 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-20 17:36:19 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-20 17:36:43,082	ERROR services.py:1350 -- Failed to start the dashboard 
+2025-01-20 17:36:43,084	ERROR services.py:1375 -- Error should be written to 'dashboard.log' or 'dashboard.err'. We are printing the last 20 lines for you. See 'https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure' to find where the log file is.
+2025-01-20 17:36:43,084	ERROR services.py:1419 -- 
+The last 20 lines of /tmp/ray/session_2025-01-20_17-36-19_962105_189768/logs/dashboard.log (it contains the error message from the dashboard): 
+2025-01-20 17:36:38,396	INFO utils.py:131 -- Module ray.dashboard.modules.actor.actor_head cannot be loaded because we cannot import all dependencies. Install this module using `pip install 'ray[default]'` for the full dashboard functionality. Error: No module named 'aiohttp_cors'
+2025-01-20 17:36:38,629	INFO utils.py:131 -- Module ray.dashboard.modules.data.data_head cannot be loaded because we cannot import all dependencies. Install this module using `pip install 'ray[default]'` for the full dashboard functionality. Error: No module named 'aiohttp_cors'
+2025-01-20 17:36:40,048	INFO utils.py:131 -- Module ray.dashboard.modules.event.event_head cannot be loaded because we cannot import all dependencies. Install this module using `pip install 'ray[default]'` for the full dashboard functionality. Error: No module named 'aiohttp_cors'
+2025-01-20 17:36:40,078	INFO utils.py:131 -- Module ray.dashboard.modules.healthz.healthz_agent cannot be loaded because we cannot import all dependencies. Install this module using `pip install 'ray[default]'` for the full dashboard functionality. Error: No module named 'aiohttp_cors'
+2025-01-20 17:36:40,114	INFO utils.py:131 -- Module ray.dashboard.modules.healthz.healthz_head cannot be loaded because we cannot import all dependencies. Install this module using `pip install 'ray[default]'` for the full dashboard functionality. Error: No module named 'aiohttp_cors'
+2025-01-20 17:36:40,693	INFO utils.py:131 -- Module ray.dashboard.modules.job.job_agent cannot be loaded because we cannot import all dependencies. Install this module using `pip install 'ray[default]'` for the full dashboard functionality. Error: No module named 'aiohttp_cors'
+2025-01-20 17:36:40,704	INFO utils.py:131 -- Module ray.dashboard.modules.job.job_head cannot be loaded because we cannot import all dependencies. Install this module using `pip install 'ray[default]'` for the full dashboard functionality. Error: No module named 'aiohttp_cors'
+2025-01-20 17:36:40,765	INFO utils.py:131 -- Module ray.dashboard.modules.log.log_agent cannot be loaded because we cannot import all dependencies. Install this module using `pip install 'ray[default]'` for the full dashboard functionality. Error: No module named 'aiohttp_cors'
+
+2025-01-20 17:36:51,326	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-20 17:37:02 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='meta-llama/Llama-3.3-70B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.3-70B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/lustre/fs1/home/jsalvador/projects/llmeval/data/llm_cache', load_format=LoadFormat.BITSANDBYTES, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=bitsandbytes, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=1737412578, served_model_name=meta-llama/Llama-3.3-70B-Instruct, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 01-20 17:37:03 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-20 17:39:36 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-20 17:39:36 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=193086)[0m INFO 01-20 17:39:36 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=193086)[0m INFO 01-20 17:39:36 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-20 17:39:38 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=193086)[0m INFO 01-20 17:39:38 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-20 17:39:39 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x1533ac0f4610>, local_subscribe_port=37181, remote_subscribe_port=None)
+INFO 01-20 17:39:39 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+[36m(RayWorkerWrapper pid=193086)[0m INFO 01-20 17:39:39 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+INFO 01-20 17:39:43 loader.py:1014] Loading weights with BitsAndBytes quantization.  May take a while ...
+[36m(RayWorkerWrapper pid=193086)[0m INFO 01-20 17:39:43 loader.py:1014] Loading weights with BitsAndBytes quantization.  May take a while ...
+INFO 01-20 17:39:44 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=193086)[0m INFO 01-20 17:39:44 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/30 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   3% Completed | 1/30 [00:20<10:08, 20.99s/it]
+Loading safetensors checkpoint shards:   7% Completed | 2/30 [00:35<08:04, 17.30s/it]
+Loading safetensors checkpoint shards:  10% Completed | 3/30 [00:48<06:52, 15.29s/it]
+Loading safetensors checkpoint shards:  13% Completed | 4/30 [01:01<06:08, 14.18s/it]
+Loading safetensors checkpoint shards:  17% Completed | 5/30 [01:13<05:39, 13.60s/it]
+Loading safetensors checkpoint shards:  20% Completed | 6/30 [01:27<05:25, 13.57s/it]
+Loading safetensors checkpoint shards:  23% Completed | 7/30 [01:39<04:59, 13.01s/it]
+Loading safetensors checkpoint shards:  27% Completed | 8/30 [01:53<04:58, 13.58s/it]
+Loading safetensors checkpoint shards:  30% Completed | 9/30 [02:09<04:59, 14.27s/it]
+Loading safetensors checkpoint shards:  33% Completed | 10/30 [02:21<04:29, 13.49s/it]
+Loading safetensors checkpoint shards:  37% Completed | 11/30 [02:28<03:41, 11.65s/it]
+Loading safetensors checkpoint shards:  40% Completed | 12/30 [02:42<03:41, 12.32s/it]
+Loading safetensors checkpoint shards:  43% Completed | 13/30 [02:56<03:34, 12.65s/it]
+Loading safetensors checkpoint shards:  47% Completed | 14/30 [03:10<03:30, 13.16s/it]
+Loading safetensors checkpoint shards:  50% Completed | 15/30 [03:29<03:43, 14.91s/it]
+Loading safetensors checkpoint shards:  53% Completed | 16/30 [03:43<03:25, 14.71s/it]
+Loading safetensors checkpoint shards:  57% Completed | 17/30 [03:58<03:12, 14.82s/it]
+Loading safetensors checkpoint shards:  60% Completed | 18/30 [04:14<02:59, 14.97s/it]
+Loading safetensors checkpoint shards:  63% Completed | 19/30 [04:32<02:57, 16.11s/it]
+Loading safetensors checkpoint shards:  67% Completed | 20/30 [04:44<02:28, 14.88s/it]
+Loading safetensors checkpoint shards:  70% Completed | 21/30 [05:04<02:26, 16.26s/it]
+Loading safetensors checkpoint shards:  73% Completed | 22/30 [05:17<02:03, 15.44s/it]
+Loading safetensors checkpoint shards:  77% Completed | 23/30 [05:27<01:35, 13.60s/it]
+Loading safetensors checkpoint shards:  80% Completed | 24/30 [05:41<01:23, 13.99s/it]
+Loading safetensors checkpoint shards:  83% Completed | 25/30 [05:53<01:06, 13.36s/it]
+Loading safetensors checkpoint shards:  87% Completed | 26/30 [06:06<00:52, 13.11s/it]
+Loading safetensors checkpoint shards:  90% Completed | 27/30 [06:21<00:40, 13.59s/it]
+Loading safetensors checkpoint shards:  93% Completed | 28/30 [06:36<00:28, 14.04s/it]
+Loading safetensors checkpoint shards:  97% Completed | 29/30 [06:57<00:16, 16.32s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [07:17<00:00, 17.39s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [07:17<00:00, 14.59s/it]
+
+[36m(RayWorkerWrapper pid=193086)[0m INFO 01-20 17:47:02 model_runner.py:1025] Loading model weights took 18.4395 GB
+INFO 01-20 17:47:02 model_runner.py:1025] Loading model weights took 18.4395 GB
+INFO 01-20 17:47:08 distributed_gpu_executor.py:57] # GPU blocks: 20819, # CPU blocks: 1638
+[[33mINFO[0m] begin collecting responses
+generating responses:   0%|          | 0/378 [00:00<?, ?it/s][36m(RayWorkerWrapper pid=193086)[0m [rank1]:[E120 18:08:01.247232782 ProcessGroupNCCL.cpp:1515] [PG 3 Rank 1] Process group watchdog thread terminated with exception: CUDA error: uncorrectable ECC error encountered
+[36m(RayWorkerWrapper pid=193086)[0m CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[36m(RayWorkerWrapper pid=193086)[0m For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[36m(RayWorkerWrapper pid=193086)[0m Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[36m(RayWorkerWrapper pid=193086)[0m 
+[36m(RayWorkerWrapper pid=193086)[0m Exception raised from c10_cuda_check_implementation at ../c10/cuda/CUDAException.cpp:43 (most recent call first):
+[36m(RayWorkerWrapper pid=193086)[0m frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x14b3a4088f86 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libc10.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::string const&) + 0x64 (0x14b3a4037d10 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libc10.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x118 (0x14b3a4163f08 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x148d5bd763e6 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0xa0 (0x148d5bd7b600 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1da (0x148d5bd822ba in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x148d5bd846fc in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #7: <unknown function> + 0xdbbf4 (0x14b419a9fbf4 in /lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6)
+[36m(RayWorkerWrapper pid=193086)[0m frame #8: <unknown function> + 0x81cf (0x14b4295e11cf in /lib64/libpthread.so.0)
+[36m(RayWorkerWrapper pid=193086)[0m frame #9: clone + 0x43 (0x14b428ac2e73 in /lib64/libc.so.6)
+[36m(RayWorkerWrapper pid=193086)[0m 
+[36m(RayWorkerWrapper pid=193086)[0m [2025-01-20 18:08:01,247 E 193086 197017] logging.cc:111: Unhandled exception: N3c1016DistBackendErrorE. what(): [PG 3 Rank 1] Process group watchdog thread terminated with exception: CUDA error: uncorrectable ECC error encountered
+[36m(RayWorkerWrapper pid=193086)[0m CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[36m(RayWorkerWrapper pid=193086)[0m For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[36m(RayWorkerWrapper pid=193086)[0m Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[36m(RayWorkerWrapper pid=193086)[0m 
+[36m(RayWorkerWrapper pid=193086)[0m Exception raised from c10_cuda_check_implementation at ../c10/cuda/CUDAException.cpp:43 (most recent call first):
+[36m(RayWorkerWrapper pid=193086)[0m frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x14b3a4088f86 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libc10.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, std::string const&) + 0x64 (0x14b3a4037d10 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libc10.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #2: c10::cuda::c10_cuda_check_implementation(int, char const*, char const*, int, bool) + 0x118 (0x14b3a4163f08 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #3: c10d::ProcessGroupNCCL::WorkNCCL::finishedGPUExecutionInternal() const + 0x56 (0x148d5bd763e6 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #4: c10d::ProcessGroupNCCL::WorkNCCL::isCompleted() + 0xa0 (0x148d5bd7b600 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #5: c10d::ProcessGroupNCCL::watchdogHandler() + 0x1da (0x148d5bd822ba in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #6: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x10c (0x148d5bd846fc in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #7: <unknown function> + 0xdbbf4 (0x14b419a9fbf4 in /lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6)
+[36m(RayWorkerWrapper pid=193086)[0m frame #8: <unknown function> + 0x81cf (0x14b4295e11cf in /lib64/libpthread.so.0)
+[36m(RayWorkerWrapper pid=193086)[0m frame #9: clone + 0x43 (0x14b428ac2e73 in /lib64/libc.so.6)
+[36m(RayWorkerWrapper pid=193086)[0m 
+[36m(RayWorkerWrapper pid=193086)[0m Exception raised from ncclCommWatchdog at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1521 (most recent call first):
+[36m(RayWorkerWrapper pid=193086)[0m frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x14b3a4088f86 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libc10.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #1: <unknown function> + 0xe5aa84 (0x148d5ba0da84 in /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+[36m(RayWorkerWrapper pid=193086)[0m frame #2: <unknown function> + 0xdbbf4 (0x14b419a9fbf4 in /lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6)
+[36m(RayWorkerWrapper pid=193086)[0m frame #3: <unknown function> + 0x81cf (0x14b4295e11cf in /lib64/libpthread.so.0)
+[36m(RayWorkerWrapper pid=193086)[0m frame #4: clone + 0x43 (0x14b428ac2e73 in /lib64/libc.so.6)
+[36m(RayWorkerWrapper pid=193086)[0m 
+[36m(RayWorkerWrapper pid=193086)[0m [2025-01-20 18:08:01,683 E 193086 197017] logging.cc:118: Stack trace: 
+[36m(RayWorkerWrapper pid=193086)[0m  /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/_raylet.so(+0x115a17a) [0x14b41af4c17a] ray::operator<<()
+[36m(RayWorkerWrapper pid=193086)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/_raylet.so(+0x115d152) [0x14b41af4f152] ray::TerminateHandler()
+[36m(RayWorkerWrapper pid=193086)[0m /lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6(+0xb135a) [0x14b419a7535a] __cxxabiv1::__terminate()
+[36m(RayWorkerWrapper pid=193086)[0m /lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6(+0xb13c5) [0x14b419a753c5]
+[36m(RayWorkerWrapper pid=193086)[0m /lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6(+0xb134f) [0x14b419a7534f]
+[36m(RayWorkerWrapper pid=193086)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so(+0xe5ab35) [0x148d5ba0db35] c10d::ProcessGroupNCCL::ncclCommWatchdog()
+[36m(RayWorkerWrapper pid=193086)[0m /lustre/fs1/home/jsalvador/.conda/envs/llmeval/bin/../lib/libstdc++.so.6(+0xdbbf4) [0x14b419a9fbf4] execute_native_thread_routine
+[36m(RayWorkerWrapper pid=193086)[0m /lib64/libpthread.so.0(+0x81cf) [0x14b4295e11cf] start_thread
+[36m(RayWorkerWrapper pid=193086)[0m /lib64/libc.so.6(clone+0x43) [0x14b428ac2e73] clone
+[36m(RayWorkerWrapper pid=193086)[0m 
+[36m(RayWorkerWrapper pid=193086)[0m *** SIGABRT received at time=1737414481 on cpu 3 ***
+[36m(RayWorkerWrapper pid=193086)[0m PC: @     0x14b428ad7aff  (unknown)  raise
+[36m(RayWorkerWrapper pid=193086)[0m     @     0x14b4295ebcf0       5072  (unknown)
+[36m(RayWorkerWrapper pid=193086)[0m     @     0x14b419a7535a  (unknown)  __cxxabiv1::__terminate()
+[36m(RayWorkerWrapper pid=193086)[0m     @     0x14b419a75070  (unknown)  (unknown)
+[36m(RayWorkerWrapper pid=193086)[0m [2025-01-20 18:08:01,684 E 193086 197017] logging.cc:447: *** SIGABRT received at time=1737414481 on cpu 3 ***
+[36m(RayWorkerWrapper pid=193086)[0m [2025-01-20 18:08:01,684 E 193086 197017] logging.cc:447: PC: @     0x14b428ad7aff  (unknown)  raise
+[36m(RayWorkerWrapper pid=193086)[0m [2025-01-20 18:08:01,684 E 193086 197017] logging.cc:447:     @     0x14b4295ebcf0       5072  (unknown)
+[36m(RayWorkerWrapper pid=193086)[0m [2025-01-20 18:08:01,684 E 193086 197017] logging.cc:447:     @     0x14b419a7535a  (unknown)  __cxxabiv1::__terminate()
+[36m(RayWorkerWrapper pid=193086)[0m [2025-01-20 18:08:01,684 E 193086 197017] logging.cc:447:     @     0x14b419a75070  (unknown)  (unknown)
+[36m(RayWorkerWrapper pid=193086)[0m Fatal Python error: Aborted
+[36m(RayWorkerWrapper pid=193086)[0m 
+[36m(RayWorkerWrapper pid=193086)[0m 
+[36m(RayWorkerWrapper pid=193086)[0m Extension modules: msgpack._cmsgpack, google._upb._message, psutil._psutil_linux, psutil._psutil_posix, setproctitle, yaml._yaml, charset_normalizer.md, requests.packages.charset_normalizer.md, requests.packages.chardet.md, uvloop.loop, ray._raylet, numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, torch._C, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, markupsafe._speedups, PIL._imaging, msgspec._core, sentencepiece._sentencepiece, PIL._imagingft, sklearn.__check_build._check_build, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.linalg._propack._spropack, scipy.sparse.linalg._propack._dpropack, scipy.sparse.linalg._propack._cpropack, scipy.sparse.linalg._propack._zpropack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.special._ellip_harm_2, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._distance_wrap, scipy.spatial._hausdorff, scipy.spatial.transform._rotation, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.interpolate._fitpack, scipy.interpolate._dfitpack, scipy.interpolate._bspl, scipy.interpolate._ppoly, scipy.interpolate.interpnd, scipy.interpolate._rbfinterp_pythran, scipy.interpolate._rgi_cython, scipy.special.cython_special, scipy.stats._stats, scipy.stats._biasedurn, scipy.stats._levy_stable.levyst, scipy.stats._stats_pythran, scipy._lib._uarray._uarray, scipy.stats._ansari_swilk_statistics, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._mvn, scipy.stats._rcont.rcont, scipy.stats._unuran.unuran_wrapper, scipy.ndimage._nd_image, _ni_label, scipy.ndimage._ni_label, pyarrow.lib, pandas._libs.tslibs.ccalendar, pandas._libs.tslibs.np_datetime, pandas._libs.tslibs.dtypes, pandas._libs.tslibs.base, pandas._libs.tslibs.nattype, pandas._libs.tslibs.timezones, pandas._libs.tslibs.fields, pandas._libs.tslibs.timedeltas, pandas._libs.tslibs.tzconversion, pandas._libs.tslibs.timestamps, pandas._libs.properties, pandas._libs.tslibs.offsets, pandas._libs.tslibs.strptime, pandas._libs.tslibs.parsing, pandas._libs.tslibs.conversion, pandas._libs.tslibs.period, pandas._libs.tslibs.vectorized, pandas._libs.ops_dispatch, pandas._libs.missing, pandas._libs.hashtable, pandas._libs.algos, pandas._libs.interval, pandas._libs.lib, pyarrow._compute, pandas._libs.ops, pandas._libs.hashing, pandas._libs.arrays, pandas._libs.tslib, pandas._libs.sparse, pandas._libs.internals, pandas._libs.indexing, pandas._libs.index, pandas._libs.writers, pandas._libs.join, pandas._libs.window.aggregations, pandas._libs.window.indexers, pandas._libs.reshape, pandas._libs.groupby, pandas._libs.json, pandas._libs.parsers, pandas._libs.testing, sklearn.utils._isfinite, sklearn.utils.sparsefuncs_fast, sklearn.utils.murmurhash, sklearn.utils._openmp_helpers, sklearn.metrics.cluster._expected_mutual_info_fast, sklearn.preprocessing._csr_polynomial_expansion, sklearn.preprocessing._target_encoder_fast, sklearn.metrics._dist_metrics, sklearn.metrics._pairwise_distances_reduction._datasets_pair, sklearn.utils._cython_blas, sklearn.metrics._pairwise_distances_reduction._base, sklearn.metrics._pairwise_distances_reduction._middle_term_computer, sklearn.utils._heap, sklearn.utils._sorting, sklearn.metrics._pairwise_distances_reduction._argkmin, sklearn.metrics._pairwise_distances_reduction._argkmin_classmode, sklearn.utils._vector_sentinel, sklearn.metrics._pairwise_distances_reduction._radius_neighbors, sklearn.metrics._pairwise_distances_reduction._radius_neighbors_classmode, sklearn.metrics._pairwise_fast, regex._regex, multidict._multidict, yarl._quoting_c, propcache._helpers_c, aiohttp._http_writer, aiohttp._http_parser, aiohttp._websocket.mask, aiohttp._websocket.reader_c, frozenlist._frozenlist, pyarrow._json, zmq.backend.cython._zmq (total: 194)
+[rank0]:[E120 18:19:36.148426825 ProcessGroupNCCL.cpp:1375] [PG 3 Rank 0] First PG on this rank that detected no heartbeat of its watchdog.
+[rank0]:[E120 18:19:36.156618553 ProcessGroupNCCL.cpp:1413] [PG 3 Rank 0] Heartbeat monitor timed out! Process will be terminated after dumping debug info. workMetaList_.size()=95
+[rank0]:[F120 18:29:36.187402290 ProcessGroupNCCL.cpp:1224] [PG 3 Rank 0] [PG 3 Rank 0] ProcessGroupNCCL's watchdog got stuck for 600 seconds without making progress in monitoring enqueued collectives. This typically indicates a NCCL/CUDA API hang blocking the watchdog, and could be triggered by another thread holding the GIL inside a CUDA api, or other deadlock-prone behaviors.If you suspect the watchdog is not actually stuck and a longer timeout would help, you can either increase the timeout (TORCH_NCCL_HEARTBEAT_TIMEOUT_SEC) to a larger value or disable the heartbeat monitor (TORCH_NCCL_ENABLE_MONITORING=0).If either of aforementioned helps, feel free to file an issue to PyTorch about the short timeout or false positive abort; otherwise, please attempt to debug the hang. workMetaList_.size() = 95
+*** SIGABRT received at time=1737415776 on cpu 47 ***
+PC: @     0x1535f6368aff  (unknown)  raise
+    @     0x1535f6e7ccf0  (unknown)  (unknown)
+    @ ... and at least 1 more frames
+[2025-01-20 18:29:36,089 E 189768 197018] logging.cc:447: *** SIGABRT received at time=1737415776 on cpu 47 ***
+[2025-01-20 18:29:36,089 E 189768 197018] logging.cc:447: PC: @     0x1535f6368aff  (unknown)  raise
+[2025-01-20 18:29:36,089 E 189768 197018] logging.cc:447:     @     0x1535f6e7ccf0  (unknown)  (unknown)
+[2025-01-20 18:29:36,089 E 189768 197018] logging.cc:447:     @ ... and at least 1 more frames
+Fatal Python error: Aborted
+
+
+Extension modules: yaml._yaml, msgpack._cmsgpack, google._upb._message, psutil._psutil_linux, psutil._psutil_posix, setproctitle, charset_normalizer.md, requests.packages.charset_normalizer.md, requests.packages.chardet.md, uvloop.loop, ray._raylet, numpy.core._multiarray_umath, numpy.core._multiarray_tests, numpy.linalg._umath_linalg, numpy.fft._pocketfft_internal, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._mt19937, numpy.random.mtrand, numpy.random._philox, numpy.random._pcg64, numpy.random._sfc64, numpy.random._generator, torch._C, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, pyarrow.lib, pandas._libs.tslibs.ccalendar, pandas._libs.tslibs.np_datetime, pandas._libs.tslibs.dtypes, pandas._libs.tslibs.base, pandas._libs.tslibs.nattype, pandas._libs.tslibs.timezones, pandas._libs.tslibs.fields, pandas._libs.tslibs.timedeltas, pandas._libs.tslibs.tzconversion, pandas._libs.tslibs.timestamps, pandas._libs.properties, pandas._libs.tslibs.offsets, pandas._libs.tslibs.strptime, pandas._libs.tslibs.parsing, pandas._libs.tslibs.conversion, pandas._libs.tslibs.period, pandas._libs.tslibs.vectorized, pandas._libs.ops_dispatch, pandas._libs.missing, pandas._libs.hashtable, pandas._libs.algos, pandas._libs.interval, pandas._libs.lib, pyarrow._compute, pandas._libs.ops, pandas._libs.hashing, pandas._libs.arrays, pandas._libs.tslib, pandas._libs.sparse, pandas._libs.internals, pandas._libs.indexing, pandas._libs.index, pandas._libs.writers, pandas._libs.join, pandas._libs.window.aggregations, pandas._libs.window.indexers, pandas._libs.reshape, pandas._libs.groupby, pandas._libs.json, pandas._libs.parsers, pandas._libs.testing, pyarrow._parquet, pyarrow._fs, pyarrow._azurefs, pyarrow._hdfs, pyarrow._gcsfs, pyarrow._s3fs, multidict._multidict, yarl._quoting_c, propcache._helpers_c, aiohttp._http_writer, aiohttp._http_parser, aiohttp._websocket.mask, aiohttp._websocket.reader_c, frozenlist._frozenlist, xxhash._xxhash, pyarrow._json, pyarrow._acero, pyarrow._csv, pyarrow._dataset, pyarrow._dataset_orc, pyarrow._parquet_encryption, pyarrow._dataset_parquet_encryption, pyarrow._dataset_parquet, markupsafe._speedups, PIL._imaging, msgspec._core, sentencepiece._sentencepiece, PIL._imagingft, sklearn.__check_build._check_build, scipy._lib._ccallback_c, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_sqrtm_triu, scipy.linalg.cython_blas, scipy.linalg._matfuncs_expm, scipy.linalg._decomp_update, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.linalg._propack._spropack, scipy.sparse.linalg._propack._dpropack, scipy.sparse.linalg._propack._cpropack, scipy.sparse.linalg._propack._zpropack, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.special._ufuncs_cxx, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.special._ellip_harm_2, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.spatial._distance_wrap, scipy.spatial._hausdorff, scipy.spatial.transform._rotation, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._cobyla, scipy.optimize._slsqp, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy.optimize._highs.cython.src._highs_wrapper, scipy.optimize._highs._highs_wrapper, scipy.optimize._highs.cython.src._highs_constants, scipy.optimize._highs._highs_constants, scipy.linalg._interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.interpolate._fitpack, scipy.interpolate._dfitpack, scipy.interpolate._bspl, scipy.interpolate._ppoly, scipy.interpolate.interpnd, scipy.interpolate._rbfinterp_pythran, scipy.interpolate._rgi_cython, scipy.special.cython_special, scipy.stats._stats, scipy.stats._biasedurn, scipy.stats._levy_stable.levyst, scipy.stats._stats_pythran, scipy._lib._uarray._uarray, scipy.stats._ansari_swilk_statistics, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._mvn, scipy.stats._rcont.rcont, scipy.stats._unuran.unuran_wrapper, scipy.ndimage._nd_image, _ni_label, scipy.ndimage._ni_label, sklearn.utils._isfinite, sklearn.utils.sparsefuncs_fast, sklearn.utils.murmurhash, sklearn.utils._openmp_helpers, sklearn.metrics.cluster._expected_mutual_info_fast, sklearn.preprocessing._csr_polynomial_expansion, sklearn.preprocessing._target_encoder_fast, sklearn.metrics._dist_metrics, sklearn.metrics._pairwise_distances_reduction._datasets_pair, sklearn.utils._cython_blas, sklearn.metrics._pairwise_distances_reduction._base, sklearn.metrics._pairwise_distances_reduction._middle_term_computer, sklearn.utils._heap, sklearn.utils._sorting, sklearn.metrics._pairwise_distances_reduction._argkmin, sklearn.metrics._pairwise_distances_reduction._argkmin_classmode, sklearn.utils._vector_sentinel, sklearn.metrics._pairwise_distances_reduction._radius_neighbors, sklearn.metrics._pairwise_distances_reduction._radius_neighbors_classmode, sklearn.metrics._pairwise_fast, regex._regex, grpc._cython.cygrpc, sklearn.feature_extraction._hashing_fast, sklearn.utils._random, sklearn.utils._seq_dataset, sklearn.linear_model._cd_fast, _loss, sklearn._loss._loss, sklearn.utils.arrayfuncs, sklearn.svm._liblinear, sklearn.svm._libsvm, sklearn.svm._libsvm_sparse, sklearn.linear_model._sag_fast, sklearn.utils._weight_vector, sklearn.linear_model._sgd_fast, scipy.io.matlab._mio_utils, scipy.io.matlab._streams, scipy.io.matlab._mio5_utils, sklearn.datasets._svmlight_format_fast, zmq.backend.cython._zmq (total: 226)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/var/spool/slurmd/job412497/slurm_script: line 10: 189768 Aborted                 (core dumped) llm_eval infill_solve -m meta-llama/Llama-3.3-70B-Instruct -p data/results/infill/20250108-222137/data.db -l 1000

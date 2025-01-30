@@ -1,0 +1,178 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+[[33mINFO[0m] running infill_solve using meta-llama/Llama-3.3-70B-Instruct
+[[33mINFO[0m] fetching subsample IDs
+counting prompt variations
+[[33mINFO[0m] unique template_name query took 1984.62 seconds
+[[33mINFO[0m] unique template_id query took 444.47 seconds
+[[33mINFO[0m] unique sys_id query took 38.94 seconds
+fitb_l0, tids: 1, sids: 6
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.15 seconds
+[[33mINFO[0m] unique template_id query took 40.00 seconds
+[[33mINFO[0m] unique sys_id query took 38.81 seconds
+fitb_l1, tids: 4, sids: 6
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.07 seconds
+[[33mINFO[0m] unique template_id query took 40.52 seconds
+[[33mINFO[0m] unique sys_id query took 38.78 seconds
+fitb_l2, tids: 5, sids: 6
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.09 seconds
+[[33mINFO[0m] unique template_id query took 38.84 seconds
+[[33mINFO[0m] unique sys_id query took 38.82 seconds
+fitb_l3, tids: 5, sids: 6
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.10 seconds
+[[33mINFO[0m] unique template_id query took 40.31 seconds
+[[33mINFO[0m] unique sys_id query took 38.88 seconds
+fitb_l4, tids: 6, sids: 6
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.11 seconds
+[[33mINFO[0m] batch_size: 1000, limit: 1000, N: 126000, N_batch: 126
+creating generator function
+[[33mINFO[0m] loading model: meta-llama/Llama-3.3-70B-Instruct
+WARNING 01-22 21:41:32 config.py:319] bitsandbytes quantization is not fully optimized yet. The speed can be slower than non-quantized models.
+WARNING 01-22 21:41:32 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-22 21:41:32 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-22 21:41:32 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-22 21:41:42,998	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-22 21:42:03 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='meta-llama/Llama-3.3-70B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.3-70B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/lustre/fs1/home/jsalvador/projects/llmeval/data/llm_cache', load_format=LoadFormat.BITSANDBYTES, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=bitsandbytes, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=1737600092, served_model_name=meta-llama/Llama-3.3-70B-Instruct, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 01-22 21:42:03 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-22 21:42:45 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-22 21:42:45 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=2627534)[0m INFO 01-22 21:42:45 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=2627534)[0m INFO 01-22 21:42:45 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 21:42:46 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 21:42:46 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14bc9de9d3d0>, local_subscribe_port=37933, remote_subscribe_port=None)
+INFO 01-22 21:42:46 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+[36m(RayWorkerWrapper pid=2627534)[0m INFO 01-22 21:42:46 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=2627534)[0m INFO 01-22 21:42:46 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+INFO 01-22 21:42:47 loader.py:1014] Loading weights with BitsAndBytes quantization.  May take a while ...
+[36m(RayWorkerWrapper pid=2627534)[0m INFO 01-22 21:42:47 loader.py:1014] Loading weights with BitsAndBytes quantization.  May take a while ...
+INFO 01-22 21:42:47 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/30 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   3% Completed | 1/30 [00:06<03:01,  6.27s/it]
+Loading safetensors checkpoint shards:   7% Completed | 2/30 [00:12<02:51,  6.12s/it]
+Loading safetensors checkpoint shards:  10% Completed | 3/30 [00:18<02:42,  6.02s/it]
+Loading safetensors checkpoint shards:  13% Completed | 4/30 [00:23<02:26,  5.63s/it]
+Loading safetensors checkpoint shards:  17% Completed | 5/30 [00:29<02:25,  5.84s/it]
+Loading safetensors checkpoint shards:  20% Completed | 6/30 [00:35<02:21,  5.89s/it]
+Loading safetensors checkpoint shards:  23% Completed | 7/30 [00:40<02:09,  5.61s/it]
+Loading safetensors checkpoint shards:  27% Completed | 8/30 [00:47<02:10,  5.92s/it]
+Loading safetensors checkpoint shards:  30% Completed | 9/30 [00:53<02:05,  5.96s/it]
+Loading safetensors checkpoint shards:  33% Completed | 10/30 [00:58<01:56,  5.81s/it]
+Loading safetensors checkpoint shards:  37% Completed | 11/30 [01:01<01:33,  4.90s/it]
+Loading safetensors checkpoint shards:  40% Completed | 12/30 [01:08<01:39,  5.53s/it]
+Loading safetensors checkpoint shards:  43% Completed | 13/30 [01:12<01:28,  5.22s/it]
+Loading safetensors checkpoint shards:  47% Completed | 14/30 [01:18<01:23,  5.24s/it]
+Loading safetensors checkpoint shards:  50% Completed | 15/30 [01:24<01:21,  5.46s/it]
+Loading safetensors checkpoint shards:  53% Completed | 16/30 [01:29<01:16,  5.49s/it]
+Loading safetensors checkpoint shards:  57% Completed | 17/30 [01:36<01:16,  5.88s/it]
+Loading safetensors checkpoint shards:  60% Completed | 18/30 [01:43<01:13,  6.11s/it]
+Loading safetensors checkpoint shards:  63% Completed | 19/30 [01:49<01:09,  6.28s/it]
+Loading safetensors checkpoint shards:  67% Completed | 20/30 [01:55<01:01,  6.19s/it]
+Loading safetensors checkpoint shards:  70% Completed | 21/30 [02:01<00:55,  6.14s/it]
+Loading safetensors checkpoint shards:  73% Completed | 22/30 [02:07<00:49,  6.16s/it]
+Loading safetensors checkpoint shards:  77% Completed | 23/30 [02:13<00:42,  6.04s/it]
+Loading safetensors checkpoint shards:  80% Completed | 24/30 [02:19<00:35,  5.99s/it]
+Loading safetensors checkpoint shards:  83% Completed | 25/30 [02:26<00:31,  6.20s/it]
+Loading safetensors checkpoint shards:  87% Completed | 26/30 [02:32<00:24,  6.19s/it]
+Loading safetensors checkpoint shards:  90% Completed | 27/30 [02:38<00:18,  6.13s/it]
+Loading safetensors checkpoint shards:  93% Completed | 28/30 [02:43<00:11,  5.81s/it]
+Loading safetensors checkpoint shards:  97% Completed | 29/30 [02:49<00:05,  5.88s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [02:55<00:00,  6.03s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [02:55<00:00,  5.87s/it]
+
+[36m(RayWorkerWrapper pid=2627534)[0m INFO 01-22 21:42:47 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=2627534)[0m INFO 01-22 21:45:43 model_runner.py:1025] Loading model weights took 18.4395 GB
+INFO 01-22 21:45:43 model_runner.py:1025] Loading model weights took 18.4395 GB
+INFO 01-22 21:45:46 distributed_gpu_executor.py:57] # GPU blocks: 20819, # CPU blocks: 1638
+[[33mINFO[0m] begin collecting responses
+generating responses:   0%|          | 0/378 [00:00<?, ?it/s]generating responses:  70%|██████▉   | 263/378 [25:41<11:13,  5.86s/it]generating responses:  70%|██████▉   | 264/378 [54:46<28:59, 15.26s/it]generating responses:  70%|███████   | 265/378 [1:15:49<46:44, 24.81s/it]generating responses:  70%|███████   | 266/378 [1:40:45<1:16:02, 40.74s/it]generating responses:  71%|███████   | 267/378 [2:06:54<1:58:24, 64.00s/it]generating responses:  71%|███████   | 268/378 [2:34:44<3:00:01, 98.19s/it]generating responses:  71%|███████   | 269/378 [3:02:08<4:21:15, 143.81s/it]generating responses:  71%|███████▏  | 270/378 [3:28:48<6:04:53, 202.72s/it]generating responses:  72%|███████▏  | 271/378 [3:51:38<7:55:14, 266.49s/it]generating responses:  72%|███████▏  | 272/378 [4:12:11<9:54:29, 336.51s/it]generating responses:  72%|███████▏  | 273/378 [4:36:33<12:53:24, 441.95s/it]generating responses:  72%|███████▏  | 274/378 [4:54:43<14:58:40, 518.47s/it]generating responses:  73%|███████▎  | 275/378 [5:09:46<16:25:33, 574.11s/it]generating responses:  73%|███████▎  | 276/378 [5:30:38<19:32:46, 689.87s/it]generating responses:  73%|███████▎  | 277/378 [5:42:34<19:29:53, 694.98s/it]generating responses:  74%|███████▎  | 278/378 [6:02:21<22:17:52, 802.73s/it]generating responses:  74%|███████▍  | 279/378 [6:19:10<23:25:36, 851.88s/it]generating responses:  74%|███████▍  | 280/378 [6:30:06<21:50:18, 802.23s/it]generating responses:  74%|███████▍  | 281/378 [6:50:25<24:36:21, 913.21s/it]generating responses:  75%|███████▍  | 282/378 [7:13:09<27:40:04, 1037.55s/it]generating responses:  75%|███████▍  | 283/378 [7:31:02<27:38:36, 1047.54s/it]generating responses:  75%|███████▌  | 284/378 [7:50:18<28:09:55, 1078.68s/it]generating responses:  75%|███████▌  | 285/378 [8:06:02<26:51:10, 1039.47s/it]generating responses:  76%|███████▌  | 286/378 [8:35:11<31:53:23, 1247.86s/it]generating responses:  76%|███████▌  | 287/378 [8:57:29<32:13:05, 1274.57s/it]generating responses:  76%|███████▌  | 288/378 [9:23:18<33:53:48, 1355.88s/it]generating responses:  76%|███████▋  | 289/378 [9:38:16<30:09:01, 1219.57s/it]generating responses:  77%|███████▋  | 290/378 [10:04:43<32:29:29, 1329.19s/it]generating responses:  77%|███████▋  | 291/378 [10:24:57<31:17:40, 1294.95s/it]generating responses:  77%|███████▋  | 292/378 [10:37:51<27:12:26, 1138.92s/it]generating responses:  78%|███████▊  | 293/378 [11:02:39<29:21:37, 1243.50s/it]generating responses:  78%|███████▊  | 294/378 [11:25:57<30:05:32, 1289.67s/it]generating responses:  78%|███████▊  | 295/378 [11:45:45<29:02:06, 1259.35s/it]generating responses:  78%|███████▊  | 296/378 [12:07:49<29:07:22, 1278.56s/it]generating responses:  79%|███████▊  | 297/378 [12:27:37<28:09:34, 1251.54s/it]generating responses:  79%|███████▉  | 298/378 [12:54:14<30:06:40, 1355.00s/it]generating responses:  79%|███████▉  | 299/378 [13:11:34<27:39:44, 1260.57s/it]generating responses:  79%|███████▉  | 300/378 [13:31:42<26:58:09, 1244.74s/it]generating responses:  80%|███████▉  | 301/378 [13:53:03<26:51:39, 1255.84s/it]generating responses:  80%|███████▉  | 302/378 [14:11:41<25:38:08, 1214.32s/it]generating responses:  80%|████████  | 303/378 [14:38:16<27:40:42, 1328.56s/it]generating responses:  80%|████████  | 304/378 [14:57:39<26:17:17, 1278.89s/it]generating responses:  81%|████████  | 305/378 [15:22:19<27:09:27, 1339.28s/it]generating responses:  81%|████████  | 306/378 [15:49:48<28:38:40, 1432.23s/it]generating responses:  81%|████████  | 307/378 [16:00:52<23:41:59, 1201.68s/it]generating responses:  81%|████████▏ | 308/378 [16:11:31<20:05:09, 1032.99s/it]generating responses:  82%|████████▏ | 309/378 [16:22:32<17:39:26, 921.26s/it] generating responses:  82%|████████▏ | 310/378 [16:33:29<15:54:10, 841.92s/it]generating responses:  82%|████████▏ | 311/378 [16:44:39<14:42:38, 790.42s/it]generating responses:  83%|████████▎ | 312/378 [16:55:28<13:42:52, 748.07s/it]generating responses:  83%|████████▎ | 313/378 [17:06:21<12:59:29, 719.53s/it]generating responses:  83%|████████▎ | 314/378 [17:21:33<13:48:57, 777.15s/it]generating responses:  83%|████████▎ | 315/378 [17:44:27<16:44:11, 956.37s/it]generating responses:  84%|████████▎ | 316/378 [17:55:29<14:56:50, 867.91s/it]generating responses:  84%|████████▍ | 317/378 [18:06:10<13:33:14, 799.91s/it]generating responses:  84%|████████▍ | 318/378 [18:16:52<12:32:39, 752.65s/it]generating responses:  84%|████████▍ | 319/378 [18:28:19<12:00:35, 732.80s/it]generating responses:  85%|████████▍ | 320/378 [18:39:10<11:24:42, 708.32s/it]generating responses:  85%|████████▍ | 321/378 [18:53:51<12:02:08, 760.14s/it]generating responses:  85%|████████▌ | 322/378 [19:04:50<11:21:01, 729.68s/it]generating responses:  85%|████████▌ | 323/378 [19:22:42<12:43:01, 832.39s/it]generating responses:  86%|████████▌ | 324/378 [19:46:12<15:05:11, 1005.76s/it]generating responses:  86%|████████▌ | 325/378 [20:10:32<16:48:47, 1142.03s/it]generating responses:  86%|████████▌ | 326/378 [20:25:39<15:28:36, 1071.47s/it]generating responses:  87%|████████▋ | 327/378 [20:44:19<15:23:08, 1086.05s/it]generating responses:  87%|████████▋ | 328/378 [21:01:44<14:54:46, 1073.73s/it]generating responses:  87%|████████▋ | 329/378 [21:15:39<13:38:18, 1002.01s/it]generating responses:  87%|████████▋ | 330/378 [21:31:50<13:14:11, 992.74s/it] generating responses:  88%|████████▊ | 331/378 [21:50:10<13:22:57, 1025.04s/it]generating responses:  88%|████████▊ | 332/378 [22:06:44<12:58:40, 1015.67s/it]generating responses:  88%|████████▊ | 333/378 [22:31:56<14:33:19, 1164.44s/it]generating responses:  88%|████████▊ | 334/378 [22:50:35<14:04:00, 1150.93s/it]generating responses:  89%|████████▊ | 335/378 [23:06:28<13:02:20, 1091.63s/it]generating responses:  89%|████████▉ | 336/378 [23:25:17<12:52:03, 1102.93s/it]generating responses:  89%|████████▉ | 337/378 [23:46:00<13:02:21, 1144.92s/it]generating responses:  89%|████████▉ | 338/378 [24:06:34<13:01:01, 1171.53s/it]generating responses:  90%|████████▉ | 339/378 [24:26:42<12:48:39, 1182.55s/it]generating responses:  90%|████████▉ | 340/378 [24:55:34<14:13:17, 1347.31s/it]generating responses:  90%|█████████ | 341/378 [25:08:44<12:07:45, 1180.14s/it]generating responses:  90%|█████████ | 342/378 [25:32:05<12:27:47, 1246.31s/it]generating responses:  91%|█████████ | 343/378 [25:58:11<13:02:59, 1342.27s/it][36m(pid=gcs_server)[0m E0124 00:43:23.565123909 2700109 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+generating responses:  91%|█████████ | 344/378 [26:31:47<14:35:07, 1544.32s/it]generating responses:  91%|█████████▏| 345/378 [26:52:57<13:24:12, 1462.18s/it]generating responses:  92%|█████████▏| 346/378 [27:14:34<12:33:23, 1412.62s/it]generating responses:  92%|█████████▏| 347/378 [27:37:36<12:05:07, 1403.46s/it]generating responses:  92%|█████████▏| 348/378 [28:02:13<11:52:43, 1425.44s/it]generating responses:  92%|█████████▏| 349/378 [28:23:56<11:11:13, 1388.76s/it]generating responses:  93%|█████████▎| 350/378 [28:50:08<11:13:43, 1443.70s/it]generating responses:  93%|█████████▎| 351/378 [29:18:05<11:21:05, 1513.54s/it]generating responses:  93%|█████████▎| 352/378 [29:44:09<11:02:29, 1528.84s/it]generating responses:  93%|█████████▎| 353/378 [30:09:06<10:33:03, 1519.34s/it]generating responses:  94%|█████████▎| 354/378 [30:35:42<10:16:57, 1542.38s/it]generating responses:  94%|█████████▍| 355/378 [30:57:51<9:26:42, 1478.37s/it] generating responses:  94%|█████████▍| 356/378 [31:24:12<9:13:16, 1508.95s/it]generating responses:  94%|█████████▍| 357/378 [31:45:33<8:24:12, 1440.59s/it]generating responses:  95%|█████████▍| 358/378 [32:12:28<8:17:37, 1492.85s/it]generating responses:  95%|█████████▍| 359/378 [32:41:28<8:16:12, 1566.98s/it]generating responses:  95%|█████████▌| 360/378 [33:08:20<7:54:09, 1580.51s/it]generating responses:  96%|█████████▌| 361/378 [33:30:12<7:05:00, 1500.05s/it][33m(raylet)[0m [2025-01-24 08:15:02,851 C 2627418 2627418] (raylet) node_manager.cc:1043: [Timeout] Exiting because this node manager has mistakenly been marked as dead by the GCS: GCS failed to check the health of this node for 5 times. This is likely because the machine or raylet has become overloaded.
+[33m(raylet)[0m *** StackTrace Information ***
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0xbdf73a) [0x5642f445973a] ray::operator<<()
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0xbe1b21) [0x5642f445bb21] ray::RayLog::~RayLog()
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0x323299) [0x5642f3b9d299] ray::raylet::NodeManager::NodeRemoved()
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0x536e69) [0x5642f3db0e69] ray::gcs::NodeInfoAccessor::HandleNotification()
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0x669e98) [0x5642f3ee3e98] EventTracker::RecordExecution()
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0x664e8e) [0x5642f3edee8e] std::_Function_handler<>::_M_invoke()
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0x665306) [0x5642f3edf306] boost::asio::detail::completion_handler<>::do_complete()
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0xc53f9b) [0x5642f44cdf9b] boost::asio::detail::scheduler::do_run_one()
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0xc56529) [0x5642f44d0529] boost::asio::detail::scheduler::run()
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0xc56a42) [0x5642f44d0a42] boost::asio::io_context::run()
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0x1e9155) [0x5642f3a63155] main
+[33m(raylet)[0m /lib64/libc.so.6(__libc_start_main+0xe5) [0x149d39edcd85] __libc_start_main
+[33m(raylet)[0m /home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/core/src/ray/raylet/raylet(+0x243277) [0x5642f3abd277]
+[33m(raylet)[0m 
+generating responses:  96%|█████████▌| 361/378 [33:58:35<1:36:00, 338.82s/it] 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 06:46:20 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 06:46:21 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 06:46:21 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 06:46:21 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 08:15:28 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 08:15:28 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 08:15:28 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 15:45:57 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 15:45:57 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 15:45:57 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 15:45:57 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 21:44:58 shm_broadcast.py:396] No available block found in 60 second. 
+[36m(RayWorkerWrapper pid=2627534)[0m WARNING 01-23 21:44:58 shm_broadcast.py:396] No available block found in 60 second. 
+[33m(raylet)[0m The node with node id: abe4cf853f45b42d683973a8cb3a21d2b3443157718f5cc5e0b6fdc0 and address: 172.17.11.28 and node name: 172.17.11.28 has been marked dead because the detector has missed too many heartbeats from it. This can happen when a 	(1) raylet crashes unexpectedly (OOM, etc.) 
+	(2) raylet has lagging heartbeats due to slow network or busy workload.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/bin/llm_eval", line 33, in <module>
+[rank0]:     sys.exit(load_entry_point('llm-eval', 'console_scripts', 'llm_eval')())
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/fs1/home/jsalvador/projects/llmeval/llm_eval/__init__.py", line 42, in main
+[rank0]:     response_collector.infill_solve(args, cfg, keywords)
+[rank0]:   File "/lustre/fs1/home/jsalvador/projects/llmeval/llm_eval/response_collector/infill.py", line 638, in infill_solve
+[rank0]:     out_sess, resp = model.generate(
+[rank0]:                      ^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/fs1/home/jsalvador/projects/llmeval/llm_eval/llm/generators/vllm.py", line 57, in generate
+[rank0]:     responses = self.model.chat(
+[rank0]:                 ^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 580, in chat
+[rank0]:     return self.generate(
+[rank0]:            ^^^^^^^^^^^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/utils.py", line 1047, in inner
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 388, in generate
+[rank0]:     outputs = self._run_engine(use_tqdm=use_tqdm)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 877, in _run_engine
+[rank0]:     step_outputs = self.llm_engine.step()
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 1329, in step
+[rank0]:     self.model_executor.stop_remote_worker_execution_loop()
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/executor/distributed_gpu_executor.py", line 91, in stop_remote_worker_execution_loop
+[rank0]:     self._wait_for_tasks_completion(parallel_worker_tasks)
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/executor/ray_gpu_executor.py", line 431, in _wait_for_tasks_completion
+[rank0]:     ray.get(parallel_worker_tasks)
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/_private/worker.py", line 2755, in get
+[rank0]:     values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+[rank0]:                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/ray/_private/worker.py", line 908, in get_objects
+[rank0]:     raise value
+[rank0]: ray.exceptions.ActorDiedError: The actor died unexpectedly before finishing this task.
+[rank0]: 	class_name: RayWorkerWrapper
+[rank0]: 	actor_id: 3032b9e3d29089d085f9f6d101000000
+[rank0]: 	pid: 2627534
+[rank0]: 	namespace: 236dee00-d808-4bcc-a886-2457a30c0480
+[rank0]: 	ip: 172.17.11.28
+[rank0]: The actor died because its node has died. Node Id: abe4cf853f45b42d683973a8cb3a21d2b3443157718f5cc5e0b6fdc0
+[rank0]: 	the actor's node was terminated unexpectedly: health check failed due to missing too many heartbeats
+[rank0]:[W124 08:27:38.521789321 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

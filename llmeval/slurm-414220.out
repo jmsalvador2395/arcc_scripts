@@ -1,0 +1,22 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+[[33mINFO[0m] running infill_solve using meta-llama/Llama-3.2-1B-Instruct
+[[33mINFO[0m] prompts to process: 155414
+[[33mINFO[0m] loading model: meta-llama/Llama-3.2-1B-Instruct
+WARNING 01-28 14:51:05 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-28 14:51:05 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-28 14:51:05 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+INFO 01-28 14:51:05 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='meta-llama/Llama-3.2-1B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.2-1B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/lustre/fs1/home/jsalvador/projects/llmeval/data/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=1738093865, served_model_name=meta-llama/Llama-3.2-1B-Instruct, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 01-28 14:51:19 model_runner.py:1014] Starting to load model meta-llama/Llama-3.2-1B-Instruct...
+INFO 01-28 14:51:24 weight_utils.py:242] Using model weights format ['*.safetensors']
+INFO 01-28 14:51:24 weight_utils.py:287] No model.safetensors.index.json found in remote.
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:03<00:00,  3.34s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:03<00:00,  3.34s/it]
+
+INFO 01-28 14:51:27 model_runner.py:1025] Loading model weights took 2.3185 GB
+INFO 01-28 14:51:31 gpu_executor.py:122] # GPU blocks: 138186, # CPU blocks: 8192
+[[33mINFO[0m] begin collecting responses
+generating responses:   0%|          | 0/16 [00:00<?, ?it/s]generating responses:   6%|▋         | 1/16 [01:18<19:30, 78.06s/it]generating responses:  12%|█▎        | 2/16 [02:30<17:27, 74.84s/it]generating responses:  19%|█▉        | 3/16 [03:27<14:23, 66.45s/it]generating responses:  25%|██▌       | 4/16 [04:36<13:30, 67.54s/it]generating responses:  31%|███▏      | 5/16 [05:42<12:16, 66.92s/it]generating responses:  38%|███▊      | 6/16 [06:57<11:38, 69.84s/it]generating responses:  44%|████▍     | 7/16 [08:17<10:58, 73.12s/it]generating responses:  50%|█████     | 8/16 [12:30<17:23, 130.46s/it]generating responses:  56%|█████▋    | 9/16 [16:55<20:06, 172.29s/it]generating responses:  62%|██████▎   | 10/16 [21:34<20:31, 205.31s/it]generating responses:  69%|██████▉   | 11/16 [26:00<18:39, 223.91s/it]generating responses:  75%|███████▌  | 12/16 [30:25<15:45, 236.45s/it]generating responses:  81%|████████▏ | 13/16 [35:11<12:34, 251.58s/it]generating responses:  88%|████████▊ | 14/16 [39:55<08:42, 261.16s/it]generating responses:  94%|█████████▍| 15/16 [44:33<04:26, 266.33s/it]generating responses: 100%|██████████| 16/16 [47:19<00:00, 236.01s/it]generating responses: 100%|██████████| 16/16 [47:19<00:00, 177.44s/it]

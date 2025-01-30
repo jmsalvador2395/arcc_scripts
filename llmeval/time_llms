@@ -1,0 +1,67 @@
+#!/bin/bash
+
+#SBATCH --nodes=1
+#SBATCH --time=40:00:00
+#SBATCH --job-name=TimeLLMs
+#SBATCH --gpus=2
+#SBATCH --constraint=h100
+
+#    "meta-llama/Llama-3.1-8B-Instruct"
+#    "meta-llama/Llama-3.2-1B-Instruct"
+#    "meta-llama/Llama-3.2-3B-Instruct "
+#    "meta-llama/Llama-3.3-70B-Instruct"
+#    "allenai/OLMo-2-1124-7B-Instruct"
+#    "allenai/OLMo-2-1124-13B-Instruct"
+#    "google/gemma-2-2b-it"
+#    "google/gemma-2-9b-it"
+#    "google/gemma-2-27b-it"
+#    "mistralai/Mistral-Nemo-Instruct-2407" #7B
+#    "mistralai/Ministral-8B-Instruct-2410"
+#    "mistralai/Mistral-Small-Instruct-2409" # 24B
+#    "mistralai/Mistral-Large-Instruct-2411" #123B
+
+function main() {
+    module load anaconda
+    echo "loaded anaconda"
+
+    module load cuda
+    echo "loaded cuda"
+
+    conda activate llmeval
+    echo "activated conda environment"
+
+    cd "${HOME}/projects/llmeval"
+    echo "changed directory to $(pwd)"
+
+    models=(
+        "allenai/OLMo-2-1124-7B-Instruct"
+        "allenai/OLMo-2-1124-13B-Instruct"
+        "google/gemma-2-2b-it"
+        "google/gemma-2-9b-it"
+        "google/gemma-2-27b-it"
+        "mistralai/Mistral-Nemo-Instruct-2407" #7B
+        "mistralai/Ministral-8B-Instruct-2410"
+        "mistralai/Mistral-Small-Instruct-2409" # 24B
+        "mistralai/Mistral-Large-Instruct-2411" #123B
+    )
+    batchsizes=(
+        500
+        2500
+        5000
+        10000
+    )
+    llm_cache="${HOME}/llm_cache"
+
+    echo "------------------"
+    for model in ${models[@]}; do
+        echo "*** EVALUATING ${model} ***"
+        for batchsize in ${batchsizes[@]}; do
+            ./scripts/time_llm -m ${model} -p data/results/infill/20250108-222137/data.db -c ${llm_cache} -l 10000 -b ${batchsize} -d
+        done
+        rm -rf ${llm_cache}
+    done
+
+}
+
+main $@
+

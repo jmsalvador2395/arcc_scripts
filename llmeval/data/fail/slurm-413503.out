@@ -1,0 +1,95 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+[[33mINFO[0m] running infill_solve using meta-llama/Llama-3.3-70B-Instruct
+[[33mINFO[0m] fetching subsample IDs
+counting prompt variations
+[[33mINFO[0m] unique template_name query took 4.20 seconds
+[[33mINFO[0m] unique template_id query took 0.01 seconds
+[[33mINFO[0m] unique sys_id query took 0.01 seconds
+fitb_l1, tids: 4, sids: 1
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.01 seconds
+[[33mINFO[0m] unique template_id query took 0.01 seconds
+[[33mINFO[0m] unique sys_id query took 0.01 seconds
+fitb_l2, tids: 4, sids: 1
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.01 seconds
+[[33mINFO[0m] unique template_id query took 0.01 seconds
+[[33mINFO[0m] unique sys_id query took 0.01 seconds
+fitb_l3, tids: 4, sids: 1
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.01 seconds
+[[33mINFO[0m] unique template_id query took 0.01 seconds
+[[33mINFO[0m] unique sys_id query took 0.01 seconds
+fitb_l4, tids: 4, sids: 1
+[[33mINFO[0m] counting samples from each query
+[[33mINFO[0m] counting samples took 0.01 seconds
+[[33mINFO[0m] batch_size: 1000, limit: 1000, N: 16000, N_batch: 16
+creating generator function
+[[33mINFO[0m] loading model: meta-llama/Llama-3.3-70B-Instruct
+WARNING 01-24 01:03:30 config.py:319] bitsandbytes quantization is not fully optimized yet. The speed can be slower than non-quantized models.
+WARNING 01-24 01:03:30 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-24 01:03:30 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-24 01:03:30 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-24 01:03:40,986	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-24 01:03:59 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='meta-llama/Llama-3.3-70B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.3-70B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/lustre/fs1/home/jsalvador/projects/llmeval/data/llm_cache', load_format=LoadFormat.BITSANDBYTES, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=bitsandbytes, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=1737698609, served_model_name=meta-llama/Llama-3.3-70B-Instruct, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 01-24 01:03:59 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-24 01:04:36 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-24 01:04:36 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=61578)[0m INFO 01-24 01:04:36 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=61578)[0m INFO 01-24 01:04:36 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-24 01:04:36 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-24 01:04:36 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14664f6f79d0>, local_subscribe_port=40159, remote_subscribe_port=None)
+[36m(RayWorkerWrapper pid=61578)[0m INFO 01-24 01:04:36 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-24 01:04:36 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+[36m(RayWorkerWrapper pid=61578)[0m INFO 01-24 01:04:36 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+INFO 01-24 01:04:38 loader.py:1014] Loading weights with BitsAndBytes quantization.  May take a while ...
+[36m(RayWorkerWrapper pid=61578)[0m INFO 01-24 01:04:38 loader.py:1014] Loading weights with BitsAndBytes quantization.  May take a while ...
+INFO 01-24 01:04:38 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=61578)[0m INFO 01-24 01:04:38 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/30 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   3% Completed | 1/30 [00:07<03:30,  7.25s/it]
+Loading safetensors checkpoint shards:   7% Completed | 2/30 [00:16<03:54,  8.39s/it]
+Loading safetensors checkpoint shards:  10% Completed | 3/30 [00:23<03:27,  7.70s/it]
+Loading safetensors checkpoint shards:  13% Completed | 4/30 [00:29<03:01,  6.98s/it]
+Loading safetensors checkpoint shards:  17% Completed | 5/30 [00:35<02:47,  6.69s/it]
+Loading safetensors checkpoint shards:  20% Completed | 6/30 [00:49<03:41,  9.23s/it]
+Loading safetensors checkpoint shards:  23% Completed | 7/30 [00:55<03:10,  8.30s/it]
+Loading safetensors checkpoint shards:  27% Completed | 8/30 [01:02<02:51,  7.77s/it]
+Loading safetensors checkpoint shards:  30% Completed | 9/30 [01:10<02:45,  7.88s/it]
+Loading safetensors checkpoint shards:  33% Completed | 10/30 [01:17<02:34,  7.70s/it]
+Loading safetensors checkpoint shards:  37% Completed | 11/30 [01:21<02:02,  6.43s/it]
+Loading safetensors checkpoint shards:  40% Completed | 12/30 [01:29<02:05,  6.99s/it]
+Loading safetensors checkpoint shards:  43% Completed | 13/30 [01:37<02:00,  7.11s/it]
+Loading safetensors checkpoint shards:  47% Completed | 14/30 [01:43<01:50,  6.92s/it]
+Loading safetensors checkpoint shards:  50% Completed | 15/30 [01:50<01:43,  6.88s/it]
+Loading safetensors checkpoint shards:  53% Completed | 16/30 [01:57<01:37,  6.94s/it]
+Loading safetensors checkpoint shards:  57% Completed | 17/30 [02:05<01:34,  7.25s/it]
+Loading safetensors checkpoint shards:  60% Completed | 18/30 [02:12<01:24,  7.02s/it]
+Loading safetensors checkpoint shards:  63% Completed | 19/30 [02:19<01:19,  7.19s/it]
+Loading safetensors checkpoint shards:  67% Completed | 20/30 [02:26<01:10,  7.05s/it]
+Loading safetensors checkpoint shards:  70% Completed | 21/30 [02:33<01:03,  7.06s/it]
+Loading safetensors checkpoint shards:  73% Completed | 22/30 [02:40<00:56,  7.11s/it]
+Loading safetensors checkpoint shards:  77% Completed | 23/30 [02:49<00:54,  7.73s/it]
+Loading safetensors checkpoint shards:  80% Completed | 24/30 [02:56<00:43,  7.29s/it]
+Loading safetensors checkpoint shards:  83% Completed | 25/30 [03:02<00:35,  7.15s/it]
+Loading safetensors checkpoint shards:  87% Completed | 26/30 [03:08<00:26,  6.66s/it]
+Loading safetensors checkpoint shards:  90% Completed | 27/30 [03:14<00:19,  6.37s/it]
+Loading safetensors checkpoint shards:  93% Completed | 28/30 [03:20<00:12,  6.48s/it]
+Loading safetensors checkpoint shards:  97% Completed | 29/30 [03:27<00:06,  6.68s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [03:36<00:00,  7.11s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [03:36<00:00,  7.20s/it]
+
+[36m(RayWorkerWrapper pid=61578)[0m INFO 01-24 01:08:15 model_runner.py:1025] Loading model weights took 18.4395 GB
+INFO 01-24 01:08:17 model_runner.py:1025] Loading model weights took 18.4395 GB
+INFO 01-24 01:08:21 distributed_gpu_executor.py:57] # GPU blocks: 20819, # CPU blocks: 1638
+[[33mINFO[0m] begin collecting responses
+generating responses:   0%|          | 0/48 [00:00<?, ?it/s][36m(bundle_reservation_check_func pid=61573)[0m [2025-01-24 01:23:04,900 E 61573 62573] gcs_rpc_client.h:664: Failed to connect to GCS within 60 seconds. GCS may have been killed. It's either GCS is terminated by `ray stop` or is killed unexpectedly. If it is killed unexpectedly, see the log file gcs_server.out. https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure. The program will terminate.
+[36m(pid=gcs_server)[0m E0124 01:23:08.404329576   65469 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0124 01:23:08.408962465   61219 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0124 01:23:08.412722229   61277 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[2025-01-24 01:24:31,052 E 61121 61561] gcs_rpc_client.h:664: Failed to connect to GCS within 60 seconds. GCS may have been killed. It's either GCS is terminated by `ray stop` or is killed unexpectedly. If it is killed unexpectedly, see the log file gcs_server.out. https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure. The program will terminate.
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

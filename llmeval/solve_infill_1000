@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#SBATCH --nodes=1
+#SBATCH --time=40:00:00
+#SBATCH --job-name=InfillSolve
+#SBATCH --gpus=2
+#SBATCH --constraint=h100
+#SBATCH --cpus-per-gpu=4
+
+function main() {
+    module load anaconda
+    echo "loaded anaconda"
+
+    module load cuda
+    echo "loaded cuda"
+
+    #conda activate llmeval
+    conda activate llm2
+    echo "activated conda environment"
+
+    cd "${HOME}/projects/llmeval"
+    echo "changed directory to $(pwd)"
+
+    # models:
+    # meta-llama/Llama-3.2-1B-Instruct
+    # meta-llama/Llama-3.2-3B-Instruct 
+    # meta-llama/Llama-3.3-70B-Instruct
+
+    llm_eval infill_solve -m meta-llama/Llama-3.3-70B-Instruct -p data/results/infill/20250108-222137/data.db -l 1000
+}
+
+main $@

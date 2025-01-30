@@ -1,0 +1,39 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+[[33mINFO[0m] running infill_solve using meta-llama/Llama-3.3-70B-Instruct
+[[33mINFO[0m] fetching subsample IDs
+counting prompt variations
+[[33mINFO[0m] unique template_name query took 1916.75 seconds
+[[33mINFO[0m] unique template_id query took 27.95 seconds
+[[33mINFO[0m] unique sys_id query took 27.36 seconds
+fitb_l0, tids: 1, sids: 6
+[[33mINFO[0m] unique template_id query took 27.28 seconds
+[[33mINFO[0m] unique sys_id query took 27.59 seconds
+fitb_l1, tids: 4, sids: 6
+[[33mINFO[0m] unique template_id query took 27.48 seconds
+[[33mINFO[0m] unique sys_id query took 27.53 seconds
+fitb_l2, tids: 5, sids: 6
+[[33mINFO[0m] unique template_id query took 27.74 seconds
+[[33mINFO[0m] unique sys_id query took 27.68 seconds
+fitb_l3, tids: 5, sids: 6
+[[33mINFO[0m] unique template_id query took 27.66 seconds
+[[33mINFO[0m] unique sys_id query took 27.64 seconds
+fitb_l4, tids: 6, sids: 6
+[[33mINFO[0m] prompts to process: 126000
+creating generator function
+[[33mINFO[0m] loading model: meta-llama/Llama-3.3-70B-Instruct
+Traceback (most recent call last):
+  File "/home/jsalvador/.conda/envs/llmeval/bin/llm_eval", line 33, in <module>
+    sys.exit(load_entry_point('llm-eval', 'console_scripts', 'llm_eval')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre/fs1/home/jsalvador/projects/llmeval/llm_eval/__init__.py", line 42, in main
+    response_collector.infill_solve(args, cfg, keywords)
+  File "/lustre/fs1/home/jsalvador/projects/llmeval/llm_eval/response_collector/infill.py", line 586, in infill_solve
+    model = VLLM(args.model, model_cache=model_cache, **model_args)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lustre/fs1/home/jsalvador/projects/llmeval/llm_eval/llm/generators/vllm.py", line 21, in __init__
+    self.model = LLM(
+                 ^^^^
+TypeError: vllm.entrypoints.llm.LLM() got multiple values for keyword argument 'tensor_parallel_size'

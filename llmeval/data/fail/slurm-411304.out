@@ -1,0 +1,138 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+[[33mINFO[0m] running infill_solve using meta-llama/Llama-3.3-70B-Instruct
+[[33mINFO[0m] fetching subsample IDs
+counting prompt variations
+[[33mINFO[0m] unique template_name query took 2038.13 seconds
+[[33mINFO[0m] unique template_id query took 28.42 seconds
+[[33mINFO[0m] unique sys_id query took 27.74 seconds
+fitb_l0, tids: 1, sids: 6
+[[33mINFO[0m] unique template_id query took 27.51 seconds
+[[33mINFO[0m] unique sys_id query took 27.63 seconds
+fitb_l1, tids: 4, sids: 6
+[[33mINFO[0m] unique template_id query took 27.72 seconds
+[[33mINFO[0m] unique sys_id query took 27.92 seconds
+fitb_l2, tids: 5, sids: 6
+[[33mINFO[0m] unique template_id query took 27.98 seconds
+[[33mINFO[0m] unique sys_id query took 28.03 seconds
+fitb_l3, tids: 5, sids: 6
+[[33mINFO[0m] unique template_id query took 28.04 seconds
+[[33mINFO[0m] unique sys_id query took 28.17 seconds
+fitb_l4, tids: 6, sids: 6
+[[33mINFO[0m] prompts to process: 126000
+creating generator function
+[[33mINFO[0m] loading model: meta-llama/Llama-3.3-70B-Instruct
+WARNING 01-16 07:13:58 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-16 07:13:58 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-16 07:13:58 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-16 07:14:12,991	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-16 07:14:15 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='meta-llama/Llama-3.3-70B-Instruct', speculative_config=None, tokenizer='meta-llama/Llama-3.3-70B-Instruct', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=48000, download_dir='/lustre/fs1/home/jsalvador/projects/llmeval/data/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=1737029638, served_model_name=meta-llama/Llama-3.3-70B-Instruct, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+INFO 01-16 07:14:16 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-16 07:14:55 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-16 07:14:55 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=12221)[0m INFO 01-16 07:14:55 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=12221)[0m INFO 01-16 07:14:55 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-16 07:14:57 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=12221)[0m INFO 01-16 07:14:57 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-16 07:14:58 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x147d94376010>, local_subscribe_port=46725, remote_subscribe_port=None)
+INFO 01-16 07:14:58 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+[36m(RayWorkerWrapper pid=12221)[0m INFO 01-16 07:14:58 model_runner.py:1014] Starting to load model meta-llama/Llama-3.3-70B-Instruct...
+INFO 01-16 07:15:01 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=12221)[0m INFO 01-16 07:15:01 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/30 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:   3% Completed | 1/30 [00:13<06:27, 13.37s/it]
+Loading safetensors checkpoint shards:   7% Completed | 2/30 [00:25<05:49, 12.49s/it]
+Loading safetensors checkpoint shards:  10% Completed | 3/30 [00:34<04:54, 10.90s/it]
+Loading safetensors checkpoint shards:  13% Completed | 4/30 [00:46<04:54, 11.35s/it]
+Loading safetensors checkpoint shards:  17% Completed | 5/30 [00:57<04:39, 11.19s/it]
+Loading safetensors checkpoint shards:  20% Completed | 6/30 [01:07<04:24, 11.02s/it]
+Loading safetensors checkpoint shards:  23% Completed | 7/30 [01:20<04:27, 11.63s/it]
+Loading safetensors checkpoint shards:  27% Completed | 8/30 [01:32<04:16, 11.65s/it]
+Loading safetensors checkpoint shards:  30% Completed | 9/30 [01:45<04:15, 12.19s/it]
+Loading safetensors checkpoint shards:  33% Completed | 10/30 [01:57<03:59, 11.98s/it]
+Loading safetensors checkpoint shards:  37% Completed | 11/30 [01:59<02:51,  9.05s/it]
+Loading safetensors checkpoint shards:  40% Completed | 12/30 [02:11<02:59, 10.00s/it]
+Loading safetensors checkpoint shards:  43% Completed | 13/30 [02:22<02:51, 10.10s/it]
+Loading safetensors checkpoint shards:  47% Completed | 14/30 [02:34<02:54, 10.88s/it]
+Loading safetensors checkpoint shards:  50% Completed | 15/30 [02:47<02:52, 11.53s/it]
+Loading safetensors checkpoint shards:  53% Completed | 16/30 [03:00<02:43, 11.69s/it]
+Loading safetensors checkpoint shards:  57% Completed | 17/30 [03:12<02:33, 11.81s/it]
+Loading safetensors checkpoint shards:  60% Completed | 18/30 [03:24<02:23, 11.97s/it]
+Loading safetensors checkpoint shards:  63% Completed | 19/30 [03:37<02:13, 12.15s/it]
+Loading safetensors checkpoint shards:  67% Completed | 20/30 [03:49<02:01, 12.11s/it]
+Loading safetensors checkpoint shards:  70% Completed | 21/30 [04:03<01:54, 12.69s/it]
+Loading safetensors checkpoint shards:  73% Completed | 22/30 [04:14<01:38, 12.31s/it]
+Loading safetensors checkpoint shards:  77% Completed | 23/30 [04:24<01:21, 11.62s/it]
+Loading safetensors checkpoint shards:  80% Completed | 24/30 [04:38<01:13, 12.22s/it]
+Loading safetensors checkpoint shards:  83% Completed | 25/30 [04:52<01:04, 12.88s/it]
+Loading safetensors checkpoint shards:  87% Completed | 26/30 [05:05<00:52, 13.04s/it]
+Loading safetensors checkpoint shards:  90% Completed | 27/30 [05:18<00:38, 12.94s/it]
+Loading safetensors checkpoint shards:  93% Completed | 28/30 [05:26<00:22, 11.33s/it]
+Loading safetensors checkpoint shards:  97% Completed | 29/30 [05:35<00:10, 10.62s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [05:46<00:00, 10.89s/it]
+Loading safetensors checkpoint shards: 100% Completed | 30/30 [05:46<00:00, 11.56s/it]
+
+INFO 01-16 07:23:45 model_runner.py:1025] Loading model weights took 65.7407 GB
+[36m(RayWorkerWrapper pid=12221)[0m INFO 01-16 07:23:45 model_runner.py:1025] Loading model weights took 65.7407 GB
+INFO 01-16 07:23:51 distributed_gpu_executor.py:57] # GPU blocks: 1481, # CPU blocks: 1638
+ERROR 01-16 07:23:51 worker_base.py:464] Error executing method initialize_cache. This might cause deadlock in distributed execution.
+ERROR 01-16 07:23:51 worker_base.py:464] Traceback (most recent call last):
+ERROR 01-16 07:23:51 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+ERROR 01-16 07:23:51 worker_base.py:464]     return executor(*args, **kwargs)
+ERROR 01-16 07:23:51 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-16 07:23:51 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 258, in initialize_cache
+ERROR 01-16 07:23:51 worker_base.py:464]     raise_if_cache_size_invalid(num_gpu_blocks,
+ERROR 01-16 07:23:51 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 483, in raise_if_cache_size_invalid
+ERROR 01-16 07:23:51 worker_base.py:464]     raise ValueError(
+ERROR 01-16 07:23:51 worker_base.py:464] ValueError: The model's max seq len (48000) is larger than the maximum number of tokens that can be stored in KV cache (23696). Try increasing `gpu_memory_utilization` or decreasing `max_model_len` when initializing the engine.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/bin/llm_eval", line 33, in <module>
+[rank0]:     sys.exit(load_entry_point('llm-eval', 'console_scripts', 'llm_eval')())
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/fs1/home/jsalvador/projects/llmeval/llm_eval/__init__.py", line 42, in main
+[rank0]:     response_collector.infill_solve(args, cfg, keywords)
+[rank0]:   File "/lustre/fs1/home/jsalvador/projects/llmeval/llm_eval/response_collector/infill.py", line 588, in infill_solve
+[rank0]:     model = VLLM(args.model, model_cache=model_cache, **model_args)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/lustre/fs1/home/jsalvador/projects/llmeval/llm_eval/llm/generators/vllm.py", line 19, in __init__
+[rank0]:     self.model = LLM(
+[rank0]:                  ^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 214, in __init__
+[rank0]:     self.llm_engine = LLMEngine.from_engine_args(
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 564, in from_engine_args
+[rank0]:     engine = cls(
+[rank0]:              ^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 339, in __init__
+[rank0]:     self._initialize_kv_caches()
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/engine/llm_engine.py", line 487, in _initialize_kv_caches
+[rank0]:     self.model_executor.initialize_cache(num_gpu_blocks, num_cpu_blocks)
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/executor/distributed_gpu_executor.py", line 63, in initialize_cache
+[rank0]:     self._run_workers("initialize_cache",
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/executor/ray_gpu_executor.py", line 411, in _run_workers
+[rank0]:     self.driver_worker.execute_method(method, *driver_args,
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 465, in execute_method
+[rank0]:     raise e
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+[rank0]:     return executor(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 258, in initialize_cache
+[rank0]:     raise_if_cache_size_invalid(num_gpu_blocks,
+[rank0]:   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 483, in raise_if_cache_size_invalid
+[rank0]:     raise ValueError(
+[rank0]: ValueError: The model's max seq len (48000) is larger than the maximum number of tokens that can be stored in KV cache (23696). Try increasing `gpu_memory_utilization` or decreasing `max_model_len` when initializing the engine.
+[36m(RayWorkerWrapper pid=12221)[0m ERROR 01-16 07:23:51 worker_base.py:464] Error executing method initialize_cache. This might cause deadlock in distributed execution.
+[36m(RayWorkerWrapper pid=12221)[0m ERROR 01-16 07:23:51 worker_base.py:464] Traceback (most recent call last):
+[36m(RayWorkerWrapper pid=12221)[0m ERROR 01-16 07:23:51 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+[36m(RayWorkerWrapper pid=12221)[0m ERROR 01-16 07:23:51 worker_base.py:464]     return executor(*args, **kwargs)
+[36m(RayWorkerWrapper pid=12221)[0m ERROR 01-16 07:23:51 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=12221)[0m ERROR 01-16 07:23:51 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 258, in initialize_cache
+[36m(RayWorkerWrapper pid=12221)[0m ERROR 01-16 07:23:51 worker_base.py:464]     raise_if_cache_size_invalid(num_gpu_blocks,
+[36m(RayWorkerWrapper pid=12221)[0m ERROR 01-16 07:23:51 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 483, in raise_if_cache_size_invalid
+[36m(RayWorkerWrapper pid=12221)[0m ERROR 01-16 07:23:51 worker_base.py:464]     raise ValueError(
+[36m(RayWorkerWrapper pid=12221)[0m ERROR 01-16 07:23:51 worker_base.py:464] ValueError: The model's max seq len (48000) is larger than the maximum number of tokens that can be stored in KV cache (23696). Try increasing `gpu_memory_utilization` or decreasing `max_model_len` when initializing the engine.
+[rank0]:[W116 07:23:58.096372750 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

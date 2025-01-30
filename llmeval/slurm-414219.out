@@ -1,0 +1,5 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+slurmstepd: error: *** JOB 414219 ON evc37 CANCELLED AT 2025-01-28T14:46:46 ***

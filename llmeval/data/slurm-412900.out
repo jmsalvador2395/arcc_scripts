@@ -1,0 +1,1184 @@
+loaded anaconda
+loaded cuda
+activated conda environment
+changed directory to /home/jsalvador/projects/llmeval
+------------------
+*** EVALUATING allenai/OLMo-2-1124-7B-Instruct ***
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-7B-Instruct
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-7B-Instruct
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-7B-Instruct
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-7B-Instruct
+*** EVALUATING allenai/OLMo-2-1124-13B-Instruct ***
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-13B-Instruct
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-13B-Instruct
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-13B-Instruct
+ERROR: FAILED TO LOAD MODEL allenai/OLMo-2-1124-13B-Instruct
+*** EVALUATING google/gemma-2-2b-it ***
+WARNING 01-21 22:11:02 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-2b-it
+WARNING 01-21 22:11:15 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-2b-it
+WARNING 01-21 22:11:28 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-2b-it
+WARNING 01-21 22:11:41 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-2b-it
+*** EVALUATING google/gemma-2-9b-it ***
+WARNING 01-21 22:11:53 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-9b-it
+WARNING 01-21 22:12:06 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-9b-it
+WARNING 01-21 22:12:19 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-9b-it
+WARNING 01-21 22:12:32 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-9b-it
+*** EVALUATING google/gemma-2-27b-it ***
+WARNING 01-21 22:12:45 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-27b-it
+WARNING 01-21 22:12:58 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-27b-it
+WARNING 01-21 22:13:11 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-27b-it
+WARNING 01-21 22:13:23 utils.py:747] Gemma 2 uses sliding window attention for every odd layer, which is currently not supported by vLLM. Disabling sliding window and capping the max length to the sliding window size (4096).
+ERROR: FAILED TO LOAD MODEL google/gemma-2-27b-it
+*** EVALUATING mistralai/Mistral-Nemo-Instruct-2407 ***
+WARNING 01-21 22:13:36 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-21 22:13:36 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-21 22:13:36 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-21 22:13:51,737	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-21 22:14:10 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Nemo-Instruct-2407', speculative_config=None, tokenizer='mistralai/Mistral-Nemo-Instruct-2407', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Nemo-Instruct-2407, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-21 22:14:10 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-21 22:14:47 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-21 22:14:47 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1077288)[0m INFO 01-21 22:14:47 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1077288)[0m INFO 01-21 22:14:47 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-21 22:14:49 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1077288)[0m INFO 01-21 22:14:49 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-21 22:14:50 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14ec6a0eb090>, local_subscribe_port=45833, remote_subscribe_port=None)
+INFO 01-21 22:14:50 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+[36m(RayWorkerWrapper pid=1077288)[0m INFO 01-21 22:14:50 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+INFO 01-21 22:14:52 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=1077288)[0m INFO 01-21 22:14:52 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:05<00:23,  5.97s/it]
+Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:12<00:18,  6.08s/it]
+Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:17<00:11,  5.96s/it]
+Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:24<00:06,  6.26s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:30<00:00,  5.98s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:30<00:00,  6.03s/it]
+
+INFO 01-21 22:27:28 model_runner.py:1025] Loading model weights took 11.4383 GB
+[36m(RayWorkerWrapper pid=1077288)[0m INFO 01-21 22:27:28 model_runner.py:1025] Loading model weights took 11.4383 GB
+INFO 01-21 22:27:35 distributed_gpu_executor.py:57] # GPU blocks: 47457, # CPU blocks: 3276
+0it [00:00, ?it/s]1it [00:29, 29.52s/it]2it [00:41, 19.01s/it]3it [01:12, 24.50s/it]4it [01:22, 19.04s/it]5it [01:33, 15.90s/it]6it [01:55, 17.94s/it]7it [02:06, 15.93s/it]8it [36:35, 669.45s/it]9it [36:50, 464.66s/it]10it [37:02, 325.15s/it]11it [37:28, 233.54s/it]12it [37:39, 165.82s/it]13it [37:51, 119.26s/it]14it [38:02, 86.45s/it] 15it [38:25, 67.41s/it]16it [38:36, 50.44s/it]17it [38:47, 38.50s/it]18it [38:59, 30.48s/it]19it [39:26, 29.47s/it]20it [39:38, 24.25s/it]20it [39:38, 118.92s/it]
+*********************************************
+model: mistralai/Mistral-Nemo-Instruct-2407, limit: 10,000, batch size: 500 num_devices: 2, time: 2,378.38
+*********************************************
+[rank0]:[W121 23:07:52.100465489 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+WARNING 01-21 23:09:37 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-21 23:09:37 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-21 23:09:37 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-21 23:09:52,042	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-21 23:10:10 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Nemo-Instruct-2407', speculative_config=None, tokenizer='mistralai/Mistral-Nemo-Instruct-2407', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Nemo-Instruct-2407, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-21 23:10:11 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-21 23:10:48 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-21 23:10:48 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1082449)[0m INFO 01-21 23:10:48 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1082449)[0m INFO 01-21 23:10:48 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-21 23:10:50 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1082449)[0m INFO 01-21 23:10:50 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-21 23:10:51 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14afa8c37790>, local_subscribe_port=39897, remote_subscribe_port=None)
+INFO 01-21 23:10:51 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+[36m(RayWorkerWrapper pid=1082449)[0m INFO 01-21 23:10:51 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+INFO 01-21 23:10:53 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=1082449)[0m INFO 01-21 23:10:53 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:06<00:24,  6.13s/it]
+Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:12<00:18,  6.17s/it]
+Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:19<00:12,  6.49s/it]
+Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:28<00:07,  7.49s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:33<00:00,  6.70s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:33<00:00,  6.70s/it]
+
+INFO 01-21 23:11:27 model_runner.py:1025] Loading model weights took 11.4383 GB
+[36m(RayWorkerWrapper pid=1082449)[0m INFO 01-21 23:11:27 model_runner.py:1025] Loading model weights took 11.4383 GB
+INFO 01-21 23:11:32 distributed_gpu_executor.py:57] # GPU blocks: 47457, # CPU blocks: 3276
+0it [00:00, ?it/s]1it [38:00, 2280.09s/it]2it [38:55, 971.74s/it] 3it [39:49, 552.25s/it]4it [40:33, 351.89s/it]4it [40:33, 608.45s/it]
+*********************************************
+model: mistralai/Mistral-Nemo-Instruct-2407, limit: 10,000, batch size: 2500 num_devices: 2, time: 2,433.84
+*********************************************
+[rank0]:[W121 23:52:34.555445713 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+WARNING 01-21 23:54:13 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-21 23:54:13 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-21 23:54:13 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-21 23:54:29,422	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-21 23:54:47 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Nemo-Instruct-2407', speculative_config=None, tokenizer='mistralai/Mistral-Nemo-Instruct-2407', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Nemo-Instruct-2407, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-21 23:54:48 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-21 23:55:25 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-21 23:55:25 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1087401)[0m INFO 01-21 23:55:25 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1087401)[0m INFO 01-21 23:55:25 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-21 23:55:27 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1087401)[0m INFO 01-21 23:55:27 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-21 23:55:28 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x150f90466550>, local_subscribe_port=59735, remote_subscribe_port=None)
+INFO 01-21 23:55:28 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+[36m(RayWorkerWrapper pid=1087401)[0m INFO 01-21 23:55:28 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+INFO 01-21 23:55:30 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=1087401)[0m INFO 01-21 23:55:30 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:05<00:23,  5.86s/it]
+Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:12<00:18,  6.12s/it]
+Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:18<00:12,  6.38s/it]
+Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:25<00:06,  6.49s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:31<00:00,  6.13s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:31<00:00,  6.21s/it]
+
+INFO 01-21 23:56:01 model_runner.py:1025] Loading model weights took 11.4383 GB
+[36m(RayWorkerWrapper pid=1087401)[0m INFO 01-21 23:56:01 model_runner.py:1025] Loading model weights took 11.4383 GB
+INFO 01-21 23:56:07 distributed_gpu_executor.py:57] # GPU blocks: 47457, # CPU blocks: 3276
+0it [00:00, ?it/s]1it [40:09, 2409.75s/it]2it [1:20:39, 2421.42s/it]2it [1:20:39, 2419.70s/it]
+*********************************************
+model: mistralai/Mistral-Nemo-Instruct-2407, limit: 10,000, batch size: 5000 num_devices: 2, time: 4,839.44
+*********************************************
+[rank0]:[W122 01:17:22.445578041 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+WARNING 01-22 01:20:24 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-22 01:20:24 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-22 01:20:24 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-22 01:20:40,757	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-22 01:20:59 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Nemo-Instruct-2407', speculative_config=None, tokenizer='mistralai/Mistral-Nemo-Instruct-2407', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Nemo-Instruct-2407, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-22 01:21:00 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-22 01:21:39 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-22 01:21:39 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1092863)[0m INFO 01-22 01:21:39 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1092863)[0m INFO 01-22 01:21:39 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 01:21:41 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1092863)[0m INFO 01-22 01:21:41 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 01:21:42 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14f0692e7010>, local_subscribe_port=38487, remote_subscribe_port=None)
+INFO 01-22 01:21:42 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+[36m(RayWorkerWrapper pid=1092863)[0m INFO 01-22 01:21:42 model_runner.py:1014] Starting to load model mistralai/Mistral-Nemo-Instruct-2407...
+INFO 01-22 01:21:45 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:05<00:23,  5.96s/it]
+Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:12<00:18,  6.32s/it]
+Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:20<00:13,  6.85s/it]
+Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:26<00:06,  6.88s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:32<00:00,  6.50s/it]
+Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:32<00:00,  6.56s/it]
+
+[36m(RayWorkerWrapper pid=1092863)[0m INFO 01-22 01:21:45 weight_utils.py:242] Using model weights format ['*.safetensors']
+INFO 01-22 01:22:18 model_runner.py:1025] Loading model weights took 11.4383 GB
+[36m(RayWorkerWrapper pid=1092863)[0m INFO 01-22 01:22:19 model_runner.py:1025] Loading model weights took 11.4383 GB
+INFO 01-22 01:22:25 distributed_gpu_executor.py:57] # GPU blocks: 47457, # CPU blocks: 3276
+0it [00:00, ?it/s][36m(pid=gcs_server)[0m E0122 01:24:09.812312411 1092514 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0122 01:24:09.812906846 1092512 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0122 01:24:09.814010456 1092527 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0122 01:24:09.817785439 1092516 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0122 01:24:09.821595184 1092512 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0122 01:24:09.821915828 1092567 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0122 01:24:09.827560380 1092517 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0122 01:24:09.828018503 1092530 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0122 01:24:09.828511319 1092547 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+[36m(pid=gcs_server)[0m E0122 01:24:09.829137229 1092563 chttp2_transport.cc:2890]             keepalive_ping_end state error: 0 (expect: 1)
+1it [43:02, 2582.61s/it]1it [43:02, 2582.83s/it]
+*********************************************
+model: mistralai/Mistral-Nemo-Instruct-2407, limit: 10,000, batch size: 10000 num_devices: 2, time: 2,582.99
+*********************************************
+[rank0]:[W122 02:06:03.041869033 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+*** EVALUATING mistralai/Ministral-8B-Instruct-2410 ***
+ERROR: FAILED TO LOAD MODEL mistralai/Ministral-8B-Instruct-2410
+ERROR: FAILED TO LOAD MODEL mistralai/Ministral-8B-Instruct-2410
+ERROR: FAILED TO LOAD MODEL mistralai/Ministral-8B-Instruct-2410
+ERROR: FAILED TO LOAD MODEL mistralai/Ministral-8B-Instruct-2410
+*** EVALUATING mistralai/Mistral-Small-Instruct-2409 ***
+WARNING 01-22 02:09:17 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-22 02:09:32,994	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-22 02:09:51 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Small-Instruct-2409', speculative_config=None, tokenizer='mistralai/Mistral-Small-Instruct-2409', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Small-Instruct-2409, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-22 02:09:51 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-22 02:10:28 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-22 02:10:28 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1098108)[0m INFO 01-22 02:10:28 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1098108)[0m INFO 01-22 02:10:28 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 02:10:30 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1098108)[0m INFO 01-22 02:10:30 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 02:10:31 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x15180a43ced0>, local_subscribe_port=43813, remote_subscribe_port=None)
+INFO 01-22 02:10:31 model_runner.py:1014] Starting to load model mistralai/Mistral-Small-Instruct-2409...
+[36m(RayWorkerWrapper pid=1098108)[0m INFO 01-22 02:10:31 model_runner.py:1014] Starting to load model mistralai/Mistral-Small-Instruct-2409...
+INFO 01-22 02:10:34 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=1098108)[0m INFO 01-22 02:10:34 weight_utils.py:242] Using model weights format ['*.safetensors']
+ERROR 01-22 02:24:05 worker_base.py:464] Error executing method load_model. This might cause deadlock in distributed execution.
+ERROR 01-22 02:24:05 worker_base.py:464] Traceback (most recent call last):
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/urllib3/response.py", line 748, in _error_catcher
+ERROR 01-22 02:24:05 worker_base.py:464]     yield
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/urllib3/response.py", line 894, in _raw_read
+ERROR 01-22 02:24:05 worker_base.py:464]     raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+ERROR 01-22 02:24:05 worker_base.py:464] urllib3.exceptions.IncompleteRead: IncompleteRead(24605522333 bytes read, 19889098419 more expected)
+ERROR 01-22 02:24:05 worker_base.py:464] 
+ERROR 01-22 02:24:05 worker_base.py:464] The above exception was the direct cause of the following exception:
+ERROR 01-22 02:24:05 worker_base.py:464] 
+ERROR 01-22 02:24:05 worker_base.py:464] Traceback (most recent call last):
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/requests/models.py", line 820, in generate
+ERROR 01-22 02:24:05 worker_base.py:464]     yield from self.raw.stream(chunk_size, decode_content=True)
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/urllib3/response.py", line 1060, in stream
+ERROR 01-22 02:24:05 worker_base.py:464]     data = self.read(amt=amt, decode_content=decode_content)
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/urllib3/response.py", line 977, in read
+ERROR 01-22 02:24:05 worker_base.py:464]     data = self._raw_read(amt)
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/urllib3/response.py", line 872, in _raw_read
+ERROR 01-22 02:24:05 worker_base.py:464]     with self._error_catcher():
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/contextlib.py", line 158, in __exit__
+ERROR 01-22 02:24:05 worker_base.py:464]     self.gen.throw(typ, value, traceback)
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/urllib3/response.py", line 772, in _error_catcher
+ERROR 01-22 02:24:05 worker_base.py:464]     raise ProtocolError(arg, e) from e
+ERROR 01-22 02:24:05 worker_base.py:464] urllib3.exceptions.ProtocolError: ('Connection broken: IncompleteRead(24605522333 bytes read, 19889098419 more expected)', IncompleteRead(24605522333 bytes read, 19889098419 more expected))
+ERROR 01-22 02:24:05 worker_base.py:464] 
+ERROR 01-22 02:24:05 worker_base.py:464] During handling of the above exception, another exception occurred:
+ERROR 01-22 02:24:05 worker_base.py:464] 
+ERROR 01-22 02:24:05 worker_base.py:464] Traceback (most recent call last):
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+ERROR 01-22 02:24:05 worker_base.py:464]     return executor(*args, **kwargs)
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+ERROR 01-22 02:24:05 worker_base.py:464]     self.model_runner.load_model()
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+ERROR 01-22 02:24:05 worker_base.py:464]     self.model = get_model(model_config=self.model_config,
+ERROR 01-22 02:24:05 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+ERROR 01-22 02:24:05 worker_base.py:464]     return loader.load_model(model_config=model_config,
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 403, in load_model
+ERROR 01-22 02:24:05 worker_base.py:464]     model.load_weights(self._get_all_weights(model_config, model))
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 493, in load_weights
+ERROR 01-22 02:24:05 worker_base.py:464]     for name, loaded_weight in weights:
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 378, in _get_all_weights
+ERROR 01-22 02:24:05 worker_base.py:464]     yield from self._get_weights_iterator(primary_weights)
+ERROR 01-22 02:24:05 worker_base.py:464]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 337, in _get_weights_iterator
+ERROR 01-22 02:24:05 worker_base.py:464]     hf_folder, hf_weights_files, use_safetensors = self._prepare_weights(
+ERROR 01-22 02:24:05 worker_base.py:464]                                                    ^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 293, in _prepare_weights
+ERROR 01-22 02:24:05 worker_base.py:464]     hf_folder = download_weights_from_hf(
+ERROR 01-22 02:24:05 worker_base.py:464]                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/weight_utils.py", line 246, in download_weights_from_hf
+ERROR 01-22 02:24:05 worker_base.py:464]     hf_folder = snapshot_download(
+ERROR 01-22 02:24:05 worker_base.py:464]                 ^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+ERROR 01-22 02:24:05 worker_base.py:464]     return fn(*args, **kwargs)
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/huggingface_hub/_snapshot_download.py", line 296, in snapshot_download
+ERROR 01-22 02:24:05 worker_base.py:464]     thread_map(
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+ERROR 01-22 02:24:05 worker_base.py:464]     return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+ERROR 01-22 02:24:05 worker_base.py:464]     return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/tqdm/std.py", line 1169, in __iter__
+ERROR 01-22 02:24:05 worker_base.py:464]     for obj in iterable:
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+ERROR 01-22 02:24:05 worker_base.py:464]     yield _result_or_cancel(fs.pop())
+ERROR 01-22 02:24:05 worker_base.py:464]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+ERROR 01-22 02:24:05 worker_base.py:464]     return fut.result(timeout)
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/concurrent/futures/_base.py", line 456, in result
+ERROR 01-22 02:24:05 worker_base.py:464]     return self.__get_result()
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+ERROR 01-22 02:24:05 worker_base.py:464]     raise self._exception
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+ERROR 01-22 02:24:05 worker_base.py:464]     result = self.fn(*self.args, **self.kwargs)
+ERROR 01-22 02:24:05 worker_base.py:464]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/huggingface_hub/_snapshot_download.py", line 270, in _inner_hf_hub_download
+ERROR 01-22 02:24:05 worker_base.py:464]     return hf_hub_download(
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+ERROR 01-22 02:24:05 worker_base.py:464]     return fn(*args, **kwargs)
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 860, in hf_hub_download
+ERROR 01-22 02:24:05 worker_base.py:464]     return _hf_hub_download_to_cache_dir(
+ERROR 01-22 02:24:05 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1009, in _hf_hub_download_to_cache_dir
+ERROR 01-22 02:24:05 worker_base.py:464]     _download_to_tmp_and_move(
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1543, in _download_to_tmp_and_move
+ERROR 01-22 02:24:05 worker_base.py:464]     http_get(
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 452, in http_get
+ERROR 01-22 02:24:05 worker_base.py:464]     for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+ERROR 01-22 02:24:05 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/requests/models.py", line 822, in generate
+ERROR 01-22 02:24:05 worker_base.py:464]     raise ChunkedEncodingError(e)
+ERROR 01-22 02:24:05 worker_base.py:464] requests.exceptions.ChunkedEncodingError: ('Connection broken: IncompleteRead(24605522333 bytes read, 19889098419 more expected)', IncompleteRead(24605522333 bytes read, 19889098419 more expected))
+ERROR: FAILED TO LOAD MODEL mistralai/Mistral-Small-Instruct-2409
+[rank0]:[W122 02:24:09.877319838 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+WARNING 01-22 02:24:35 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-22 02:24:46,306	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-22 02:25:04 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Small-Instruct-2409', speculative_config=None, tokenizer='mistralai/Mistral-Small-Instruct-2409', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Small-Instruct-2409, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-22 02:25:04 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-22 02:25:39 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-22 02:25:39 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1102674)[0m INFO 01-22 02:25:39 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1102674)[0m INFO 01-22 02:25:39 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 02:25:40 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 02:25:40 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x151c2f158650>, local_subscribe_port=41449, remote_subscribe_port=None)
+INFO 01-22 02:25:40 model_runner.py:1014] Starting to load model mistralai/Mistral-Small-Instruct-2409...
+[36m(RayWorkerWrapper pid=1102674)[0m INFO 01-22 02:25:40 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1102674)[0m INFO 01-22 02:25:40 model_runner.py:1014] Starting to load model mistralai/Mistral-Small-Instruct-2409...
+INFO 01-22 02:25:40 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=1102674)[0m INFO 01-22 02:25:40 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/9 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  11% Completed | 1/9 [00:09<01:12,  9.06s/it]
+Loading safetensors checkpoint shards:  22% Completed | 2/9 [00:14<00:48,  6.92s/it]
+Loading safetensors checkpoint shards:  33% Completed | 3/9 [00:21<00:40,  6.81s/it]
+Loading safetensors checkpoint shards:  44% Completed | 4/9 [00:27<00:33,  6.67s/it]
+Loading safetensors checkpoint shards:  56% Completed | 5/9 [00:36<00:29,  7.35s/it]
+Loading safetensors checkpoint shards:  67% Completed | 6/9 [00:41<00:20,  6.67s/it]
+Loading safetensors checkpoint shards:  78% Completed | 7/9 [00:47<00:12,  6.47s/it]
+Loading safetensors checkpoint shards:  89% Completed | 8/9 [00:52<00:06,  6.13s/it]
+Loading safetensors checkpoint shards: 100% Completed | 9/9 [00:59<00:00,  6.18s/it]
+Loading safetensors checkpoint shards: 100% Completed | 9/9 [00:59<00:00,  6.58s/it]
+
+INFO 01-22 02:34:50 model_runner.py:1025] Loading model weights took 20.7279 GB
+[36m(RayWorkerWrapper pid=1102674)[0m INFO 01-22 02:34:50 model_runner.py:1025] Loading model weights took 20.7279 GB
+INFO 01-22 02:35:02 distributed_gpu_executor.py:57] # GPU blocks: 27277, # CPU blocks: 2340
+[2025-01-22 02:48:18,141 E 1102253 1106329] gcs_rpc_client.h:664: Failed to connect to GCS within 60 seconds. GCS may have been killed. It's either GCS is terminated by `ray stop` or is killed unexpectedly. If it is killed unexpectedly, see the log file gcs_server.out. https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure. The program will terminate.
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+WARNING 01-22 02:51:13 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-22 02:51:29,061	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-22 02:51:47 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Small-Instruct-2409', speculative_config=None, tokenizer='mistralai/Mistral-Small-Instruct-2409', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Small-Instruct-2409, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-22 02:51:47 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+[36m(RayWorkerWrapper pid=1107349)[0m INFO 01-22 02:52:25 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1107349)[0m INFO 01-22 02:52:25 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 02:52:25 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-22 02:52:25 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 02:52:28 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1107349)[0m INFO 01-22 02:52:28 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 02:52:29 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14cc05b04150>, local_subscribe_port=36681, remote_subscribe_port=None)
+INFO 01-22 02:52:30 model_runner.py:1014] Starting to load model mistralai/Mistral-Small-Instruct-2409...
+[36m(RayWorkerWrapper pid=1107349)[0m INFO 01-22 02:52:30 model_runner.py:1014] Starting to load model mistralai/Mistral-Small-Instruct-2409...
+INFO 01-22 02:52:32 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/9 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  11% Completed | 1/9 [00:08<01:05,  8.14s/it]
+Loading safetensors checkpoint shards:  22% Completed | 2/9 [00:13<00:45,  6.50s/it]
+Loading safetensors checkpoint shards:  33% Completed | 3/9 [00:21<00:43,  7.31s/it]
+Loading safetensors checkpoint shards:  44% Completed | 4/9 [00:31<00:40,  8.14s/it]
+Loading safetensors checkpoint shards:  56% Completed | 5/9 [00:39<00:32,  8.14s/it]
+Loading safetensors checkpoint shards:  67% Completed | 6/9 [00:45<00:22,  7.35s/it]
+Loading safetensors checkpoint shards:  78% Completed | 7/9 [00:51<00:14,  7.15s/it]
+Loading safetensors checkpoint shards:  89% Completed | 8/9 [00:57<00:06,  6.70s/it]
+Loading safetensors checkpoint shards: 100% Completed | 9/9 [01:03<00:00,  6.54s/it]
+Loading safetensors checkpoint shards: 100% Completed | 9/9 [01:03<00:00,  7.09s/it]
+
+[36m(RayWorkerWrapper pid=1107349)[0m INFO 01-22 02:52:32 weight_utils.py:242] Using model weights format ['*.safetensors']
+INFO 01-22 02:53:37 model_runner.py:1025] Loading model weights took 20.7279 GB
+[36m(RayWorkerWrapper pid=1107349)[0m INFO 01-22 02:53:37 model_runner.py:1025] Loading model weights took 20.7279 GB
+INFO 01-22 02:53:48 distributed_gpu_executor.py:57] # GPU blocks: 27277, # CPU blocks: 2340
+[2025-01-22 03:03:36,990 E 1106894 1110969] gcs_rpc_client.h:664: Failed to connect to GCS within 60 seconds. GCS may have been killed. It's either GCS is terminated by `ray stop` or is killed unexpectedly. If it is killed unexpectedly, see the log file gcs_server.out. https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure. The program will terminate.
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+WARNING 01-22 03:06:30 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-22 03:06:44,482	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-22 03:07:02 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Small-Instruct-2409', speculative_config=None, tokenizer='mistralai/Mistral-Small-Instruct-2409', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Small-Instruct-2409, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-22 03:07:03 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-22 03:07:39 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-22 03:07:39 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1111913)[0m INFO 01-22 03:07:39 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1111913)[0m INFO 01-22 03:07:39 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 03:07:41 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1111913)[0m INFO 01-22 03:07:41 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 03:07:42 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14388d0ba6d0>, local_subscribe_port=50317, remote_subscribe_port=None)
+INFO 01-22 03:07:42 model_runner.py:1014] Starting to load model mistralai/Mistral-Small-Instruct-2409...
+[36m(RayWorkerWrapper pid=1111913)[0m INFO 01-22 03:07:42 model_runner.py:1014] Starting to load model mistralai/Mistral-Small-Instruct-2409...
+INFO 01-22 03:07:45 weight_utils.py:242] Using model weights format ['*.safetensors']
+[36m(RayWorkerWrapper pid=1111913)[0m INFO 01-22 03:07:45 weight_utils.py:242] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/9 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  11% Completed | 1/9 [00:08<01:05,  8.20s/it]
+Loading safetensors checkpoint shards:  22% Completed | 2/9 [00:13<00:46,  6.61s/it]
+Loading safetensors checkpoint shards:  33% Completed | 3/9 [00:22<00:44,  7.48s/it]
+Loading safetensors checkpoint shards:  44% Completed | 4/9 [00:32<00:42,  8.48s/it]
+Loading safetensors checkpoint shards:  56% Completed | 5/9 [00:40<00:34,  8.55s/it]
+Loading safetensors checkpoint shards:  67% Completed | 6/9 [00:46<00:22,  7.52s/it]
+Loading safetensors checkpoint shards:  78% Completed | 7/9 [00:52<00:14,  7.08s/it]
+Loading safetensors checkpoint shards:  89% Completed | 8/9 [00:58<00:06,  6.87s/it]
+Loading safetensors checkpoint shards: 100% Completed | 9/9 [01:04<00:00,  6.55s/it]
+Loading safetensors checkpoint shards: 100% Completed | 9/9 [01:04<00:00,  7.20s/it]
+
+INFO 01-22 03:08:50 model_runner.py:1025] Loading model weights took 20.7279 GB
+[36m(RayWorkerWrapper pid=1111913)[0m INFO 01-22 03:08:50 model_runner.py:1025] Loading model weights took 20.7279 GB
+INFO 01-22 03:09:02 distributed_gpu_executor.py:57] # GPU blocks: 27277, # CPU blocks: 2340
+[2025-01-22 03:17:21,522 E 1111456 1115560] gcs_rpc_client.h:664: Failed to connect to GCS within 60 seconds. GCS may have been killed. It's either GCS is terminated by `ray stop` or is killed unexpectedly. If it is killed unexpectedly, see the log file gcs_server.out. https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure. The program will terminate.
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+*** EVALUATING mistralai/Mistral-Large-Instruct-2411 ***
+INFO 01-22 03:19:53 config.py:1652] Downcasting torch.float32 to torch.float16.
+WARNING 01-22 03:19:53 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-22 03:19:53 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-22 03:19:53 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-22 03:20:09,072	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-22 03:20:27 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Large-Instruct-2411', speculative_config=None, tokenizer='mistralai/Mistral-Large-Instruct-2411', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Large-Instruct-2411, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-22 03:20:28 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-22 03:21:06 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-22 03:21:06 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1116593)[0m INFO 01-22 03:21:06 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1116593)[0m INFO 01-22 03:21:06 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 03:21:08 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1116593)[0m INFO 01-22 03:21:08 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 03:21:08 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14c74d1ff1d0>, local_subscribe_port=53153, remote_subscribe_port=None)
+INFO 01-22 03:21:08 model_runner.py:1014] Starting to load model mistralai/Mistral-Large-Instruct-2411...
+[36m(RayWorkerWrapper pid=1116593)[0m INFO 01-22 03:21:08 model_runner.py:1014] Starting to load model mistralai/Mistral-Large-Instruct-2411...
+ERROR 01-22 03:21:12 worker_base.py:464] Error executing method load_model. This might cause deadlock in distributed execution.
+ERROR 01-22 03:21:12 worker_base.py:464] Traceback (most recent call last):
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+ERROR 01-22 03:21:12 worker_base.py:464]     return executor(*args, **kwargs)
+ERROR 01-22 03:21:12 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+ERROR 01-22 03:21:12 worker_base.py:464]     self.model_runner.load_model()
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+ERROR 01-22 03:21:12 worker_base.py:464]     self.model = get_model(model_config=self.model_config,
+ERROR 01-22 03:21:12 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+ERROR 01-22 03:21:12 worker_base.py:464]     return loader.load_model(model_config=model_config,
+ERROR 01-22 03:21:12 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+ERROR 01-22 03:21:12 worker_base.py:464]     model = _initialize_model(model_config, self.load_config,
+ERROR 01-22 03:21:12 worker_base.py:464]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+ERROR 01-22 03:21:12 worker_base.py:464]     return build_model(
+ERROR 01-22 03:21:12 worker_base.py:464]            ^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+ERROR 01-22 03:21:12 worker_base.py:464]     return model_class(config=hf_config,
+ERROR 01-22 03:21:12 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+ERROR 01-22 03:21:12 worker_base.py:464]     self.model = LlamaModel(config,
+ERROR 01-22 03:21:12 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+ERROR 01-22 03:21:12 worker_base.py:464]     self.start_layer, self.end_layer, self.layers = make_layers(
+ERROR 01-22 03:21:12 worker_base.py:464]                                                     ^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+ERROR 01-22 03:21:12 worker_base.py:464]     [PPMissingLayer() for _ in range(start_layer)] + [
+ERROR 01-22 03:21:12 worker_base.py:464]                                                      ^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+ERROR 01-22 03:21:12 worker_base.py:464]     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+ERROR 01-22 03:21:12 worker_base.py:464]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+ERROR 01-22 03:21:12 worker_base.py:464]     lambda prefix: LlamaDecoderLayer(config=config,
+ERROR 01-22 03:21:12 worker_base.py:464]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+ERROR 01-22 03:21:12 worker_base.py:464]     self.mlp = LlamaMLP(
+ERROR 01-22 03:21:12 worker_base.py:464]                ^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+ERROR 01-22 03:21:12 worker_base.py:464]     self.gate_up_proj = MergedColumnParallelLinear(
+ERROR 01-22 03:21:12 worker_base.py:464]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+ERROR 01-22 03:21:12 worker_base.py:464]     super().__init__(input_size=input_size,
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+ERROR 01-22 03:21:12 worker_base.py:464]     self.quant_method.create_weights(
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+ERROR 01-22 03:21:12 worker_base.py:464]     weight = Parameter(torch.empty(sum(output_partition_sizes),
+ERROR 01-22 03:21:12 worker_base.py:464]                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+ERROR 01-22 03:21:12 worker_base.py:464]     return func(*args, **kwargs)
+ERROR 01-22 03:21:12 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:21:12 worker_base.py:464] torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 0 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR: FAILED TO LOAD MODEL mistralai/Mistral-Large-Instruct-2411
+2025-01-22 03:21:12,209	ERROR worker.py:422 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::RayWorkerWrapper.execute_method()[39m (pid=1116593, ip=172.17.11.44, actor_id=8e60dc8b63d0aa34d925ac6901000000, repr=<vllm.executor.ray_utils.RayWorkerWrapper object at 0x15242a2e74d0>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 465, in execute_method
+    raise e
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+    return executor(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+    self.model_runner.load_model()
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+    self.model = get_model(model_config=self.model_config,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+    return loader.load_model(model_config=model_config,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+    model = _initialize_model(model_config, self.load_config,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+    return build_model(
+           ^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+    return model_class(config=hf_config,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+    self.model = LlamaModel(config,
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+    self.start_layer, self.end_layer, self.layers = make_layers(
+                                                    ^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+    [PPMissingLayer() for _ in range(start_layer)] + [
+                                                     ^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+    maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+    lambda prefix: LlamaDecoderLayer(config=config,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+    self.mlp = LlamaMLP(
+               ^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+    self.gate_up_proj = MergedColumnParallelLinear(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+    super().__init__(input_size=input_size,
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+    self.quant_method.create_weights(
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+    weight = Parameter(torch.empty(sum(output_partition_sizes),
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 1 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464] Error executing method load_model. This might cause deadlock in distributed execution.
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464] Traceback (most recent call last):
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     return executor(*args, **kwargs)
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     self.model_runner.load_model()
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     self.model = get_model(model_config=self.model_config,
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     return loader.load_model(model_config=model_config,
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     model = _initialize_model(model_config, self.load_config,
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     return build_model(
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]            ^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     return model_class(config=hf_config,
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     self.model = LlamaModel(config,
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     self.start_layer, self.end_layer, self.layers = make_layers(
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]                                                     ^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     [PPMissingLayer() for _ in range(start_layer)] + [
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]                                                      ^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     lambda prefix: LlamaDecoderLayer(config=config,
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     self.mlp = LlamaMLP(
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]                ^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     self.gate_up_proj = MergedColumnParallelLinear(
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     super().__init__(input_size=input_size,
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     self.quant_method.create_weights(
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     weight = Parameter(torch.empty(sum(output_partition_sizes),
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]     return func(*args, **kwargs)
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1116593)[0m ERROR 01-22 03:21:12 worker_base.py:464] torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 1 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]:[W122 03:21:16.702268131 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+INFO 01-22 03:21:35 config.py:1652] Downcasting torch.float32 to torch.float16.
+WARNING 01-22 03:21:35 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-22 03:21:35 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-22 03:21:35 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-22 03:21:45,767	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-22 03:22:03 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Large-Instruct-2411', speculative_config=None, tokenizer='mistralai/Mistral-Large-Instruct-2411', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Large-Instruct-2411, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-22 03:22:03 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-22 03:22:39 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-22 03:22:39 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1121024)[0m INFO 01-22 03:22:39 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1121024)[0m INFO 01-22 03:22:39 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 03:22:39 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 03:22:39 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14c9ab7c0ed0>, local_subscribe_port=43647, remote_subscribe_port=None)
+INFO 01-22 03:22:39 model_runner.py:1014] Starting to load model mistralai/Mistral-Large-Instruct-2411...
+[36m(RayWorkerWrapper pid=1121024)[0m INFO 01-22 03:22:39 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1121024)[0m INFO 01-22 03:22:39 model_runner.py:1014] Starting to load model mistralai/Mistral-Large-Instruct-2411...
+ERROR 01-22 03:22:40 worker_base.py:464] Error executing method load_model. This might cause deadlock in distributed execution.
+ERROR 01-22 03:22:40 worker_base.py:464] Traceback (most recent call last):
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+ERROR 01-22 03:22:40 worker_base.py:464]     return executor(*args, **kwargs)
+ERROR 01-22 03:22:40 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+ERROR 01-22 03:22:40 worker_base.py:464]     self.model_runner.load_model()
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+ERROR 01-22 03:22:40 worker_base.py:464]     self.model = get_model(model_config=self.model_config,
+ERROR 01-22 03:22:40 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+ERROR 01-22 03:22:40 worker_base.py:464]     return loader.load_model(model_config=model_config,
+ERROR 01-22 03:22:40 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+ERROR 01-22 03:22:40 worker_base.py:464]     model = _initialize_model(model_config, self.load_config,
+ERROR 01-22 03:22:40 worker_base.py:464]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+ERROR 01-22 03:22:40 worker_base.py:464]     return build_model(
+ERROR 01-22 03:22:40 worker_base.py:464]            ^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+ERROR 01-22 03:22:40 worker_base.py:464]     return model_class(config=hf_config,
+ERROR 01-22 03:22:40 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+ERROR 01-22 03:22:40 worker_base.py:464]     self.model = LlamaModel(config,
+ERROR 01-22 03:22:40 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+ERROR 01-22 03:22:40 worker_base.py:464]     self.start_layer, self.end_layer, self.layers = make_layers(
+ERROR 01-22 03:22:40 worker_base.py:464]                                                     ^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+ERROR 01-22 03:22:40 worker_base.py:464]     [PPMissingLayer() for _ in range(start_layer)] + [
+ERROR 01-22 03:22:40 worker_base.py:464]                                                      ^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+ERROR 01-22 03:22:40 worker_base.py:464]     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+ERROR 01-22 03:22:40 worker_base.py:464]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+ERROR 01-22 03:22:40 worker_base.py:464]     lambda prefix: LlamaDecoderLayer(config=config,
+ERROR 01-22 03:22:40 worker_base.py:464]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+ERROR 01-22 03:22:40 worker_base.py:464]     self.mlp = LlamaMLP(
+ERROR 01-22 03:22:40 worker_base.py:464]                ^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+ERROR 01-22 03:22:40 worker_base.py:464]     self.gate_up_proj = MergedColumnParallelLinear(
+ERROR 01-22 03:22:40 worker_base.py:464]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+ERROR 01-22 03:22:40 worker_base.py:464]     super().__init__(input_size=input_size,
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+ERROR 01-22 03:22:40 worker_base.py:464]     self.quant_method.create_weights(
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+ERROR 01-22 03:22:40 worker_base.py:464]     weight = Parameter(torch.empty(sum(output_partition_sizes),
+ERROR 01-22 03:22:40 worker_base.py:464]                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+ERROR 01-22 03:22:40 worker_base.py:464]     return func(*args, **kwargs)
+ERROR 01-22 03:22:40 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:22:40 worker_base.py:464] torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 0 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR: FAILED TO LOAD MODEL mistralai/Mistral-Large-Instruct-2411
+2025-01-22 03:22:40,148	ERROR worker.py:422 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::RayWorkerWrapper.execute_method()[39m (pid=1121024, ip=172.17.11.44, actor_id=e394494b57dd2233c7dab2bb01000000, repr=<vllm.executor.ray_utils.RayWorkerWrapper object at 0x151d9108fe10>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 465, in execute_method
+    raise e
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+    return executor(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+    self.model_runner.load_model()
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+    self.model = get_model(model_config=self.model_config,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+    return loader.load_model(model_config=model_config,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+    model = _initialize_model(model_config, self.load_config,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+    return build_model(
+           ^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+    return model_class(config=hf_config,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+    self.model = LlamaModel(config,
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+    self.start_layer, self.end_layer, self.layers = make_layers(
+                                                    ^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+    [PPMissingLayer() for _ in range(start_layer)] + [
+                                                     ^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+    maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+    lambda prefix: LlamaDecoderLayer(config=config,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+    self.mlp = LlamaMLP(
+               ^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+    self.gate_up_proj = MergedColumnParallelLinear(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+    super().__init__(input_size=input_size,
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+    self.quant_method.create_weights(
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+    weight = Parameter(torch.empty(sum(output_partition_sizes),
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 1 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464] Error executing method load_model. This might cause deadlock in distributed execution.
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464] Traceback (most recent call last):
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     return executor(*args, **kwargs)
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     self.model_runner.load_model()
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     self.model = get_model(model_config=self.model_config,
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     return loader.load_model(model_config=model_config,
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     model = _initialize_model(model_config, self.load_config,
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     return build_model(
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]            ^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     return model_class(config=hf_config,
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     self.model = LlamaModel(config,
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     self.start_layer, self.end_layer, self.layers = make_layers(
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]                                                     ^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     [PPMissingLayer() for _ in range(start_layer)] + [
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]                                                      ^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     lambda prefix: LlamaDecoderLayer(config=config,
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     self.mlp = LlamaMLP(
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]                ^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     self.gate_up_proj = MergedColumnParallelLinear(
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     super().__init__(input_size=input_size,
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     self.quant_method.create_weights(
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     weight = Parameter(torch.empty(sum(output_partition_sizes),
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]     return func(*args, **kwargs)
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1121024)[0m ERROR 01-22 03:22:40 worker_base.py:464] torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 1 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]:[W122 03:22:43.412890062 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+INFO 01-22 03:22:57 config.py:1652] Downcasting torch.float32 to torch.float16.
+WARNING 01-22 03:22:57 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-22 03:22:57 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-22 03:22:57 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-22 03:23:07,267	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-22 03:23:25 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Large-Instruct-2411', speculative_config=None, tokenizer='mistralai/Mistral-Large-Instruct-2411', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Large-Instruct-2411, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-22 03:23:25 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-22 03:23:59 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-22 03:23:59 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1125429)[0m INFO 01-22 03:23:59 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1125429)[0m INFO 01-22 03:23:59 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 03:24:00 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 03:24:00 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x146182d9cd90>, local_subscribe_port=57499, remote_subscribe_port=None)
+[36m(RayWorkerWrapper pid=1125429)[0m INFO 01-22 03:24:00 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 03:24:00 model_runner.py:1014] Starting to load model mistralai/Mistral-Large-Instruct-2411...
+[36m(RayWorkerWrapper pid=1125429)[0m INFO 01-22 03:24:00 model_runner.py:1014] Starting to load model mistralai/Mistral-Large-Instruct-2411...
+ERROR 01-22 03:24:00 worker_base.py:464] Error executing method load_model. This might cause deadlock in distributed execution.
+ERROR 01-22 03:24:00 worker_base.py:464] Traceback (most recent call last):
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+ERROR 01-22 03:24:00 worker_base.py:464]     return executor(*args, **kwargs)
+ERROR 01-22 03:24:00 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+ERROR 01-22 03:24:00 worker_base.py:464]     self.model_runner.load_model()
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+ERROR 01-22 03:24:00 worker_base.py:464]     self.model = get_model(model_config=self.model_config,
+ERROR 01-22 03:24:00 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+ERROR 01-22 03:24:00 worker_base.py:464]     return loader.load_model(model_config=model_config,
+ERROR 01-22 03:24:00 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+ERROR 01-22 03:24:00 worker_base.py:464]     model = _initialize_model(model_config, self.load_config,
+ERROR 01-22 03:24:00 worker_base.py:464]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+ERROR 01-22 03:24:00 worker_base.py:464]     return build_model(
+ERROR 01-22 03:24:00 worker_base.py:464]            ^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+ERROR 01-22 03:24:00 worker_base.py:464]     return model_class(config=hf_config,
+ERROR 01-22 03:24:00 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+ERROR 01-22 03:24:00 worker_base.py:464]     self.model = LlamaModel(config,
+ERROR 01-22 03:24:00 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+ERROR 01-22 03:24:00 worker_base.py:464]     self.start_layer, self.end_layer, self.layers = make_layers(
+ERROR 01-22 03:24:00 worker_base.py:464]                                                     ^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+ERROR 01-22 03:24:00 worker_base.py:464]     [PPMissingLayer() for _ in range(start_layer)] + [
+ERROR 01-22 03:24:00 worker_base.py:464]                                                      ^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+ERROR 01-22 03:24:00 worker_base.py:464]     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+ERROR 01-22 03:24:00 worker_base.py:464]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+ERROR 01-22 03:24:00 worker_base.py:464]     lambda prefix: LlamaDecoderLayer(config=config,
+ERROR 01-22 03:24:00 worker_base.py:464]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+ERROR 01-22 03:24:00 worker_base.py:464]     self.mlp = LlamaMLP(
+ERROR 01-22 03:24:00 worker_base.py:464]                ^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+ERROR 01-22 03:24:00 worker_base.py:464]     self.gate_up_proj = MergedColumnParallelLinear(
+ERROR 01-22 03:24:00 worker_base.py:464]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+ERROR 01-22 03:24:00 worker_base.py:464]     super().__init__(input_size=input_size,
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+ERROR 01-22 03:24:00 worker_base.py:464]     self.quant_method.create_weights(
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+ERROR 01-22 03:24:00 worker_base.py:464]     weight = Parameter(torch.empty(sum(output_partition_sizes),
+ERROR 01-22 03:24:00 worker_base.py:464]                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+ERROR 01-22 03:24:00 worker_base.py:464]     return func(*args, **kwargs)
+ERROR 01-22 03:24:00 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:24:00 worker_base.py:464] torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 0 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR: FAILED TO LOAD MODEL mistralai/Mistral-Large-Instruct-2411
+2025-01-22 03:24:00,701	ERROR worker.py:422 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::RayWorkerWrapper.execute_method()[39m (pid=1125429, ip=172.17.11.44, actor_id=33c14f508f868ffb85c1949601000000, repr=<vllm.executor.ray_utils.RayWorkerWrapper object at 0x148343dfd910>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 465, in execute_method
+    raise e
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+    return executor(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+    self.model_runner.load_model()
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+    self.model = get_model(model_config=self.model_config,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+    return loader.load_model(model_config=model_config,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+    model = _initialize_model(model_config, self.load_config,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+    return build_model(
+           ^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+    return model_class(config=hf_config,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+    self.model = LlamaModel(config,
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+    self.start_layer, self.end_layer, self.layers = make_layers(
+                                                    ^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+    [PPMissingLayer() for _ in range(start_layer)] + [
+                                                     ^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+    maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+    lambda prefix: LlamaDecoderLayer(config=config,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+    self.mlp = LlamaMLP(
+               ^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+    self.gate_up_proj = MergedColumnParallelLinear(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+    super().__init__(input_size=input_size,
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+    self.quant_method.create_weights(
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+    weight = Parameter(torch.empty(sum(output_partition_sizes),
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 1 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464] Error executing method load_model. This might cause deadlock in distributed execution.
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464] Traceback (most recent call last):
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     return executor(*args, **kwargs)
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     self.model_runner.load_model()
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     self.model = get_model(model_config=self.model_config,
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     return loader.load_model(model_config=model_config,
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     model = _initialize_model(model_config, self.load_config,
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     return build_model(
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]            ^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     return model_class(config=hf_config,
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     self.model = LlamaModel(config,
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     self.start_layer, self.end_layer, self.layers = make_layers(
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]                                                     ^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     [PPMissingLayer() for _ in range(start_layer)] + [
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]                                                      ^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     lambda prefix: LlamaDecoderLayer(config=config,
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     self.mlp = LlamaMLP(
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]                ^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     self.gate_up_proj = MergedColumnParallelLinear(
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     super().__init__(input_size=input_size,
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     self.quant_method.create_weights(
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     weight = Parameter(torch.empty(sum(output_partition_sizes),
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]     return func(*args, **kwargs)
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1125429)[0m ERROR 01-22 03:24:00 worker_base.py:464] torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 1 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]:[W122 03:24:03.880799976 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+INFO 01-22 03:24:17 config.py:1652] Downcasting torch.float32 to torch.float16.
+WARNING 01-22 03:24:17 arg_utils.py:930] Chunked prefill is enabled by default for models with max_model_len > 32K. Currently, chunked prefill might not work with some features or models. If you encounter any issues, please disable chunked prefill by setting --enable-chunked-prefill=False.
+INFO 01-22 03:24:17 config.py:1010] Chunked prefill is enabled with max_num_batched_tokens=512.
+WARNING 01-22 03:24:17 config.py:389] To see benefits of async output processing, enable CUDA graph. Since, enforce-eager is enabled, async output processor cannot be used
+2025-01-22 03:24:27,868	INFO worker.py:1821 -- Started a local Ray instance.
+INFO 01-22 03:24:45 llm_engine.py:226] Initializing an LLM engine (v0.6.1.dev238+ge2c6e0a82) with config: model='mistralai/Mistral-Large-Instruct-2411', speculative_config=None, tokenizer='mistralai/Mistral-Large-Instruct-2411', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.float16, max_seq_len=50000, download_dir='/home/jsalvador/llm_cache', load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=0, served_model_name=mistralai/Mistral-Large-Instruct-2411, use_v2_block_manager=False, num_scheduler_steps=1, multi_step_stream_outputs=False, enable_prefix_caching=False, use_async_output_proc=False, use_cached_outputs=False, mm_processor_kwargs=None)
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/transformers_utils/tokenizer_group/tokenizer_group.py:23: FutureWarning: It is strongly recommended to run mistral models with `--tokenizer_mode "mistral"` to ensure correct encoding and decoding.
+  self.tokenizer = get_tokenizer(self.tokenizer_id, **tokenizer_config)
+INFO 01-22 03:24:46 ray_gpu_executor.py:134] use_ray_spmd_worker: False
+INFO 01-22 03:25:20 utils.py:992] Found nccl from library libnccl.so.2
+INFO 01-22 03:25:20 pynccl.py:63] vLLM is using nccl==2.20.5
+[36m(RayWorkerWrapper pid=1129852)[0m INFO 01-22 03:25:20 utils.py:992] Found nccl from library libnccl.so.2
+[36m(RayWorkerWrapper pid=1129852)[0m INFO 01-22 03:25:20 pynccl.py:63] vLLM is using nccl==2.20.5
+INFO 01-22 03:25:20 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+INFO 01-22 03:25:20 shm_broadcast.py:241] vLLM message queue communication handle: Handle(connect_ip='127.0.0.1', local_reader_ranks=[1], buffer=<vllm.distributed.device_communicators.shm_broadcast.ShmRingBuffer object at 0x14f2400d0690>, local_subscribe_port=40425, remote_subscribe_port=None)
+INFO 01-22 03:25:20 model_runner.py:1014] Starting to load model mistralai/Mistral-Large-Instruct-2411...
+[36m(RayWorkerWrapper pid=1129852)[0m INFO 01-22 03:25:20 custom_all_reduce_utils.py:242] reading GPU P2P access cache from /home/jsalvador/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
+[36m(RayWorkerWrapper pid=1129852)[0m INFO 01-22 03:25:20 model_runner.py:1014] Starting to load model mistralai/Mistral-Large-Instruct-2411...
+ERROR 01-22 03:25:21 worker_base.py:464] Error executing method load_model. This might cause deadlock in distributed execution.
+ERROR 01-22 03:25:21 worker_base.py:464] Traceback (most recent call last):
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+ERROR 01-22 03:25:21 worker_base.py:464]     return executor(*args, **kwargs)
+ERROR 01-22 03:25:21 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+ERROR 01-22 03:25:21 worker_base.py:464]     self.model_runner.load_model()
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+ERROR 01-22 03:25:21 worker_base.py:464]     self.model = get_model(model_config=self.model_config,
+ERROR 01-22 03:25:21 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+ERROR 01-22 03:25:21 worker_base.py:464]     return loader.load_model(model_config=model_config,
+ERROR 01-22 03:25:21 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+ERROR 01-22 03:25:21 worker_base.py:464]     model = _initialize_model(model_config, self.load_config,
+ERROR 01-22 03:25:21 worker_base.py:464]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+ERROR 01-22 03:25:21 worker_base.py:464]     return build_model(
+ERROR 01-22 03:25:21 worker_base.py:464]            ^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+ERROR 01-22 03:25:21 worker_base.py:464]     return model_class(config=hf_config,
+ERROR 01-22 03:25:21 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+ERROR 01-22 03:25:21 worker_base.py:464]     self.model = LlamaModel(config,
+ERROR 01-22 03:25:21 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+ERROR 01-22 03:25:21 worker_base.py:464]     self.start_layer, self.end_layer, self.layers = make_layers(
+ERROR 01-22 03:25:21 worker_base.py:464]                                                     ^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+ERROR 01-22 03:25:21 worker_base.py:464]     [PPMissingLayer() for _ in range(start_layer)] + [
+ERROR 01-22 03:25:21 worker_base.py:464]                                                      ^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+ERROR 01-22 03:25:21 worker_base.py:464]     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+ERROR 01-22 03:25:21 worker_base.py:464]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+ERROR 01-22 03:25:21 worker_base.py:464]     lambda prefix: LlamaDecoderLayer(config=config,
+ERROR 01-22 03:25:21 worker_base.py:464]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+ERROR 01-22 03:25:21 worker_base.py:464]     self.mlp = LlamaMLP(
+ERROR 01-22 03:25:21 worker_base.py:464]                ^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+ERROR 01-22 03:25:21 worker_base.py:464]     self.gate_up_proj = MergedColumnParallelLinear(
+ERROR 01-22 03:25:21 worker_base.py:464]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+ERROR 01-22 03:25:21 worker_base.py:464]     super().__init__(input_size=input_size,
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+ERROR 01-22 03:25:21 worker_base.py:464]     self.quant_method.create_weights(
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+ERROR 01-22 03:25:21 worker_base.py:464]     weight = Parameter(torch.empty(sum(output_partition_sizes),
+ERROR 01-22 03:25:21 worker_base.py:464]                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+ERROR 01-22 03:25:21 worker_base.py:464]     return func(*args, **kwargs)
+ERROR 01-22 03:25:21 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^
+ERROR 01-22 03:25:21 worker_base.py:464] torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 0 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+ERROR: FAILED TO LOAD MODEL mistralai/Mistral-Large-Instruct-2411
+2025-01-22 03:25:21,187	ERROR worker.py:422 -- Unhandled error (suppress with 'RAY_IGNORE_UNHANDLED_ERRORS=1'): [36mray::RayWorkerWrapper.execute_method()[39m (pid=1129852, ip=172.17.11.44, actor_id=c01ac7ab9e341d5d9ced733201000000, repr=<vllm.executor.ray_utils.RayWorkerWrapper object at 0x14f01f1c7310>)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 465, in execute_method
+    raise e
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+    return executor(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+    self.model_runner.load_model()
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+    self.model = get_model(model_config=self.model_config,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+    return loader.load_model(model_config=model_config,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+    model = _initialize_model(model_config, self.load_config,
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+    return build_model(
+           ^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+    return model_class(config=hf_config,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+    self.model = LlamaModel(config,
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+    self.start_layer, self.end_layer, self.layers = make_layers(
+                                                    ^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+    [PPMissingLayer() for _ in range(start_layer)] + [
+                                                     ^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+    maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+    lambda prefix: LlamaDecoderLayer(config=config,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+    self.mlp = LlamaMLP(
+               ^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+    self.gate_up_proj = MergedColumnParallelLinear(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+    super().__init__(input_size=input_size,
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+    self.quant_method.create_weights(
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+    weight = Parameter(torch.empty(sum(output_partition_sizes),
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 1 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464] Error executing method load_model. This might cause deadlock in distributed execution.
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464] Traceback (most recent call last):
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker_base.py", line 456, in execute_method
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     return executor(*args, **kwargs)
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/worker.py", line 183, in load_model
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     self.model_runner.load_model()
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/worker/model_runner.py", line 1016, in load_model
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     self.model = get_model(model_config=self.model_config,
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 19, in get_model
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     return loader.load_model(model_config=model_config,
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 399, in load_model
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     model = _initialize_model(model_config, self.load_config,
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 176, in _initialize_model
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     return build_model(
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]            ^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 161, in build_model
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     return model_class(config=hf_config,
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 410, in __init__
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     self.model = LlamaModel(config,
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]                  ^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 292, in __init__
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     self.start_layer, self.end_layer, self.layers = make_layers(
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]                                                     ^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 282, in make_layers
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     [PPMissingLayer() for _ in range(start_layer)] + [
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]                                                      ^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 283, in <listcomp>
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 294, in <lambda>
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     lambda prefix: LlamaDecoderLayer(config=config,
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 223, in __init__
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     self.mlp = LlamaMLP(
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]                ^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/models/llama.py", line 70, in __init__
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     self.gate_up_proj = MergedColumnParallelLinear(
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 420, in __init__
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     super().__init__(input_size=input_size,
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 304, in __init__
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     self.quant_method.create_weights(
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 122, in create_weights
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     weight = Parameter(torch.empty(sum(output_partition_sizes),
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]   File "/home/jsalvador/.conda/envs/llmeval/lib/python3.11/site-packages/torch/utils/_device.py", line 79, in __torch_function__
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]     return func(*args, **kwargs)
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464]            ^^^^^^^^^^^^^^^^^^^^^
+[36m(RayWorkerWrapper pid=1129852)[0m ERROR 01-22 03:25:21 worker_base.py:464] torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 672.00 MiB. GPU 1 has a total capacity of 79.10 GiB of which 265.88 MiB is free. Including non-PyTorch memory, this process has 78.83 GiB memory in use. Of the allocated memory 78.08 GiB is allocated by PyTorch, and 17.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]:[W122 03:25:24.437520569 CudaIPCTypes.cpp:16] Producer process has been terminated before all shared CUDA tensors released. See Note [Sharing CUDA tensors]
+/home/jsalvador/.conda/envs/llmeval/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
